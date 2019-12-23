@@ -13,8 +13,6 @@ Fazal Emaad
 Tobi Onireti 
 
 ### Supervisors
-Dr Jacques Carette, McMaster University
-
 Dr Stephanie Thomas, Curtin University
 
 ### Capstone Coordinator
