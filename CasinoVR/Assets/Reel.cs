@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ReelA : MonoBehaviour 
+public class Reel : MonoBehaviour 
 {
     
     public void TestReel()

@@ -4,18 +4,24 @@ using UnityEngine;
 
 public class Lever : MonoBehaviour
 {
-    ReelA reela;
-    ReelA reelb;
+    Reel reela;
+    Reel reelb;
+    Reel reelc;
+    Reel reeld;
 
     void OnMouseDown()
     {
         
         Debug.Log("Mouse left click pressed.");
-        reela = GameObject.Find("ReelA").GetComponent<ReelA>();
 
-        reela.TestReel();
-        reelb = GameObject.Find("ReelB").GetComponent<ReelA>();
-        reelb.TestReel();
+        //changes reel values to 8
+        GameObject.Find("ReelA").GetComponent<Reel>().TestReel();
+
+        GameObject.Find("ReelB").GetComponent<Reel>().TestReel();
+
+        GameObject.Find("ReelC").GetComponent<Reel>().TestReel();
+
+        GameObject.Find("ReelD").GetComponent<Reel>().TestReel();
 
 
 
