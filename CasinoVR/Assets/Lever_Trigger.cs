@@ -60,55 +60,55 @@ public class Lever_Trigger : MonoBehaviour
                 case OutcomeType.L:
                     //disable ReelB reel spin
                     GameObject.Find("ReelB").GetComponent<Reel_Secondary_Spin>().EndRand();
-                    GameObject.Find("ReelB").GetComponent<Reel_Secondary_Spin>().setLossImage();
+                    GameObject.Find("ReelB").GetComponent<Reel_Secondary_Spin>().SetLossImage();
 
                     yield return StartCoroutine(WaitForTime(1.0f));
 
                     //disable ReelC reel spin
                     GameObject.Find("ReelC").GetComponent<Reel_Secondary_Spin>().EndRand();
-                    GameObject.Find("ReelC").GetComponent<Reel_Secondary_Spin>().setLossImage();
+                    GameObject.Find("ReelC").GetComponent<Reel_Secondary_Spin>().SetLossImage();
 
                     yield return StartCoroutine(WaitForTime(1.0f));
 
                     //disable ReelD reel spin
                     GameObject.Find("ReelD").GetComponent<Reel_Secondary_Spin>().EndRand();
-                    GameObject.Find("ReelD").GetComponent<Reel_Secondary_Spin>().setLossImage();
+                    GameObject.Find("ReelD").GetComponent<Reel_Secondary_Spin>().SetLossImage();
                     break;
 
                 case OutcomeType.NM:
                     //disable ReelB reel spin
                     GameObject.Find("ReelB").GetComponent<Reel_Secondary_Spin>().EndRand();
-                    GameObject.Find("ReelB").GetComponent<Reel_Secondary_Spin>().setWinImage();
+                    GameObject.Find("ReelB").GetComponent<Reel_Secondary_Spin>().SetWinImage();
 
                     yield return StartCoroutine(WaitForTime(1.0f));
 
                     //disable ReelC reel spin
                     GameObject.Find("ReelC").GetComponent<Reel_Secondary_Spin>().EndRand();
-                    GameObject.Find("ReelC").GetComponent<Reel_Secondary_Spin>().setWinImage();
+                    GameObject.Find("ReelC").GetComponent<Reel_Secondary_Spin>().SetWinImage();
 
                     yield return StartCoroutine(WaitForTime(1.0f));
 
                     //disable ReelD reel spin
                     GameObject.Find("ReelD").GetComponent<Reel_Secondary_Spin>().EndRand();
-                    GameObject.Find("ReelD").GetComponent<Reel_Secondary_Spin>().setNearMissImage();
+                    GameObject.Find("ReelD").GetComponent<Reel_Secondary_Spin>().SetNearMissImage();
                     break;
 
                 case OutcomeType.W:
                     //disable ReelB reel spin
                     GameObject.Find("ReelB").GetComponent<Reel_Secondary_Spin>().EndRand();
-                    GameObject.Find("ReelB").GetComponent<Reel_Secondary_Spin>().setWinImage();
+                    GameObject.Find("ReelB").GetComponent<Reel_Secondary_Spin>().SetWinImage();
 
                     yield return StartCoroutine(WaitForTime(1.0f));
 
                     //disable ReelC reel spin
                     GameObject.Find("ReelC").GetComponent<Reel_Secondary_Spin>().EndRand();
-                    GameObject.Find("ReelC").GetComponent<Reel_Secondary_Spin>().setWinImage();
+                    GameObject.Find("ReelC").GetComponent<Reel_Secondary_Spin>().SetWinImage();
 
                     yield return StartCoroutine(WaitForTime(1.0f));
 
                     //disable ReelD reel spin
                     GameObject.Find("ReelD").GetComponent<Reel_Secondary_Spin>().EndRand();
-                    GameObject.Find("ReelD").GetComponent<Reel_Secondary_Spin>().setWinImage();
+                    GameObject.Find("ReelD").GetComponent<Reel_Secondary_Spin>().SetWinImage();
                     break;
             }
 

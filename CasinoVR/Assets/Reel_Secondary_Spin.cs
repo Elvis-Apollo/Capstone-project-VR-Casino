@@ -37,33 +37,34 @@ public class Reel_Secondary_Spin : MonoBehaviour
 
     void RandomingImage()
     {
+        //tracking the current sprite helps us compare it to the final sprite of ReelB,ReelC,ReelD with ReelA
         currentSprite = gameObject.GetComponent<UnityEngine.UI.Image>().sprite = sprites[Random.Range(0, sprites.Length)];
     }
 
-    public void setWinImage()
+    public void SetWinImage()
     {
         gameObject.GetComponent<UnityEngine.UI.Image>().sprite = reelObj.GetComponent<Reel_Primary_Spin>().finalSprite;
     }
 
-    public void setLossImage()
+    public void SetLossImage()
     {
         if (currentSprite == reelObj.GetComponent<Reel_Primary_Spin>().finalSprite)
         {
-            Sprite[] spriteCopy = reelObj.GetComponent<Reel_Primary_Spin>().sprites;
-            List<Sprite> spriteCopyList = spriteCopy.OfType<Sprite>().ToList();
-            spriteCopyList.Remove(currentSprite);
+            Sprite[] spriteCopy = reelObj.GetComponent<Reel_Primary_Spin>().sprites; //make a copy for original sprites array from reel_primary_spin
+            List<Sprite> spriteCopyList = spriteCopy.OfType<Sprite>().ToList(); //change array to list
+            spriteCopyList.Remove(currentSprite); // remove the currentSprite from spriteCopyList so that we can random through remaining sprites for L outcome
             gameObject.GetComponent<UnityEngine.UI.Image>().sprite = spriteCopyList[Random.Range(0, spriteCopyList.Count)];
         }
         // else: leave current object on the reel
     }
 
-    public void setNearMissImage()
+    public void SetNearMissImage()
     {
 
-        Sprite[] spriteCopy = reelObj.GetComponent<Reel_Primary_Spin>().sprites;
-        List<Sprite> spriteCopyList = spriteCopy.OfType<Sprite>().ToList();
-        int index = spriteCopyList.IndexOf(reelObj.GetComponent<Reel_Primary_Spin>().finalSprite);
-        if (index != spriteCopyList.Count - 1)
+        Sprite[] spriteCopy = reelObj.GetComponent<Reel_Primary_Spin>().sprites; //make a copy for original sprites array from reel_primary_spin
+        List<Sprite> spriteCopyList = spriteCopy.OfType<Sprite>().ToList(); //change array to list
+        int index = spriteCopyList.IndexOf(reelObj.GetComponent<Reel_Primary_Spin>().finalSprite); //get the index of the finalSprite from reel_primary_spin 
+        if (index != spriteCopyList.Count - 1) //use this index to finalize image for ReelD for a NearMiss outcome.
             gameObject.GetComponent<UnityEngine.UI.Image>().sprite = spriteCopyList[index + 1];
         else
         {
