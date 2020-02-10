@@ -2,23 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//using Valve.VR.InteractionSystem;
 
 public class Lever_Trigger : MonoBehaviour
 {
-
+    //this list is hardcoded in this prototype but will eventually get populated in the admin portal
     List<OutcomeType> outcomesList = new List<OutcomeType> {
-        OutcomeType.L, OutcomeType.L, OutcomeType.NM, OutcomeType.NM, OutcomeType.W
+        OutcomeType.L, OutcomeType.NM, OutcomeType.W
     };
     //is it time to spin the reels?
     public bool spinReels = false;
-
-    // VR function
-    //private void OnHeld()
-    //{
-    //    GameObject.Find("Lever").GetComponent<Throwable>().isAttachedToHand();
-    //    Debug.Log("held works");
-    //}
 
     //boolean to check if the reels are currently spinning
     bool isInPlay = false;
@@ -32,20 +24,20 @@ public class Lever_Trigger : MonoBehaviour
     }
 
     // called when mouse is clicked on the lever object
-    private IEnumerator OnMouseDown()
+    private IEnumerator ActivateLever()
     {
-        Debug.Log("Mouse left click pressed.");
-        int tries = outcomesList.Count;
+        Debug.Log("Lever has been activated.");
+        int tries = outcomesList.Count; // number of tries a user gets == size of outcome list
 
         //condition to check if tries available and reels not in play
         if (tries > 0 && isInPlay == false)
         {
-            Debug.Log("Try no. " + tries);
+            Debug.Log("Try number: " + tries);
             OutcomeType outcome = outcomesList[(Random.Range(0, tries))];
-            Debug.Log("Current Outcome: " + outcome.ToString());
+            Debug.Log("Current Outcome: " + outcome.ToString()); // this is the predefined outcome for this play
             outcomesList.Remove(outcome); // remove current outcome from list, also reduces one try
 
-            isInPlay = true;
+            isInPlay = true; //bool to check if a play is going on(reels spinning)
             spinReels = true; // start spinning the reels
 
             //start spinning all reels
@@ -150,7 +142,11 @@ public class Lever_Trigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
+        bool attached = this.GetComponent<Valve.VR.InteractionSystem.Throwable>().isAttachedToHand();
+        if (attached)
+        {
+            Debug.Log("VR hand has been attached to the lever");
+            StartCoroutine(ActivateLever());
+        }
     }
 }

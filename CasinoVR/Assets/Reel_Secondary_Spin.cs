@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
+/*
+ * This class is used to activate spin on ReelB, ReelC and ReelD game objects.
+   Note: Outcome of the spin of these objects is based off the results of spinning ReelA and
+   the predefined outcome list(Lever_Trigger.outcomesList)
+ */
 public class Reel_Secondary_Spin : MonoBehaviour
 {
 
