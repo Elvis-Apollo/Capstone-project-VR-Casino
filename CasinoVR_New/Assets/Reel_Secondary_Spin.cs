@@ -10,6 +10,8 @@ public class Reel_Secondary_Spin : MonoBehaviour
 
     public GameObject leverObject;
 
+    public GameObject ButtonObject;// To link button with reel
+
     public GameObject reelObj;
 
     Sprite currentSprite;
@@ -24,7 +26,7 @@ public class Reel_Secondary_Spin : MonoBehaviour
     void Update()
     {
         //RandomingImage();
-        if (leverObject.GetComponent<Lever_Trigger>().spinReels == true)
+        if (leverObject.GetComponent<Lever_Trigger>().spinReels == true | ButtonObject.GetComponent<Lever_Trigger>().spinReels == true)
         {
             RandomingImage();
         }

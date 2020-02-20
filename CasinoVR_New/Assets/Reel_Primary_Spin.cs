@@ -10,6 +10,8 @@ public class Reel_Primary_Spin : MonoBehaviour
 
     public GameObject leverObject;
 
+    public GameObject ButtonObject;// To link button with reel
+
     public Sprite finalSprite;
 
     // Use this for initialization
@@ -22,7 +24,7 @@ public class Reel_Primary_Spin : MonoBehaviour
     void Update()
     {
         //RandomingImage();
-        if (leverObject.GetComponent<Lever_Trigger>().spinReels == true)
+        if (leverObject.GetComponent<Lever_Trigger>().spinReels == true | ButtonObject.GetComponent<Lever_Trigger>().spinReels == true)
         {
             RandomingImage();
         }
