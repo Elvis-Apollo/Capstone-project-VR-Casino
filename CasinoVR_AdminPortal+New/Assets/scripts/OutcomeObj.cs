@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
+using Valve.Newtonsoft.Json;
 
 public class OutcomeObj : MonoBehaviour
 {
@@ -11,23 +13,23 @@ public class OutcomeObj : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        JsonParser jsonP = new JsonParser();
         Debug.Log("COUNT b4: " + outcomesList.Count.ToString());
+        AdminPortalJasonParser admin = JsonConvert.DeserializeObject<AdminPortalJasonParser>(File.ReadAllText(@"Assets/scripts/AdminPortal.json"));
         int NumOfLosses;
         int NumOfWins;
         int NumOfNearMisses;
 
-        if (!Int32.TryParse(jsonP.InitAdminPortalFromJson().NumOfLosses, out NumOfLosses))
+        if (!Int32.TryParse(admin.NumOfLosses, out NumOfLosses))
         {
             // parsing attempt was unsuccessful
             Debug.Log("Parsing String to int failed");
         }
-        if (!Int32.TryParse(jsonP.InitAdminPortalFromJson().NumOfWins, out NumOfWins))
+        if (!Int32.TryParse(admin.NumOfWins, out NumOfWins))
         {
             // parsing attempt was unsuccessful
             Debug.Log("Parsing String to int failed");
         }
-        if (!Int32.TryParse(jsonP.InitAdminPortalFromJson().NumOfNearMisses, out NumOfNearMisses))
+        if (!Int32.TryParse(admin.NumOfNearMisses, out NumOfNearMisses))
         {
             // parsing attempt was unsuccessful
             Debug.Log("Parsing String to int failed");
