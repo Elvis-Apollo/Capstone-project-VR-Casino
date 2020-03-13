@@ -2,7 +2,7 @@
 
 /*
  * Author: Aleem Haq
- * Data: March 2020
+ * Date: March 2020
  * 
  * This script checks for when hand is attached to the button
  */

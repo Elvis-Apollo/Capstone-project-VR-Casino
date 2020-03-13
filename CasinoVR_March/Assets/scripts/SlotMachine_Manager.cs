@@ -4,7 +4,7 @@ using Valve.Newtonsoft.Json;
 
 /*
  * Author: Aleem Haq
- * Data: March 2020
+ * Date: March 2020
  * 
  * This script acts as a state manager for a slot machine.
  * Data is loaded from json files for each SlotMachine_x
@@ -62,7 +62,7 @@ public class SlotMachine_Manager : MonoBehaviour
 
         var holt_laury_obj = JsonConvert.DeserializeObject<HoltLoaryObj>(File.ReadAllText(@"Assets/scripts/Json_files/HoltLaury_1.json"));
 
-        Debug.Log("Win Payoff Amount: " + holt_laury_obj.getPayoff());
+        Debug.Log(this.name + " Win Payoff Amount: " + holt_laury_obj.getPayoff());
 
 
         Tries_Left_Count = admin.OutcomeList.Count;

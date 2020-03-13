@@ -4,7 +4,7 @@ using UnityEngine;
 
 /*
  * Author: Aleem Haq
- * Data: March 2020 * 
+ * Date: March 2020 * 
  * This class is a Holt Laury object for a holtLaury.json data type
  */
 public class HoltLoaryObj
@@ -47,28 +47,22 @@ public class HoltLoaryObj
             tempMax = 0.0f;
             tempMin = 0.0f;
         }
-        Debug.Log(" Chosen payoff of format 'A|B x' is " + random_payoff + " where, x/10 of " + tempMax + " and, (10-x)/10 of : " + tempMin);
+        Debug.Log("Chosen payoff of format 'A|B x' is " + random_payoff + " where, x/10 of " + tempMax + " and, (10-x)/10 of : " + tempMin);
 
         char[] trimChars = { 'A', 'B', ' ' }; // remove A|B or whitespace prefix
-        var rowNumber = random_payoff.TrimStart(trimChars); // get number only string
+        var rowNumber = random_payoff.TrimStart(trimChars); // get number only string        
 
-        Debug.Log("Row Number: " + rowNumber);
-
+        //match row number with i and then apply the math for payoff using i/rowNumber value
         for (int i = 1; i <= 10; i++)
         {
-            if (rowNumber == i.ToString())
-            {  //convert string to int and compare with i
-                //finalPayoff = (tempMax * (i / 10)) + (tempMin * ((10 - i) / 10)); // apply payoff holt laury formula
-
-                var a = tempMax * (i / 10.0);
-
-                var b = tempMin * ((10 - i) / 10.0);
-                Debug.Log("A: " + a.ToString());
-                Debug.Log("B: " + b);
-                finalPayoff = (float ) (a + b); // apply payoff holt laury formula
+            if (rowNumber == i.ToString()) //convert string to int and compare with i
+            {
+                // apply payoff payoff holt laury formula
+                // max * (x/10)  +  min * ((10-x) / 10)
+                finalPayoff = (float ) ((tempMax * (i / 10.0)) + (tempMin * ((10 - i) / 10.0)));
                 break;
             }
         }        
-        return (float)Math.Round((double)finalPayoff, 2);
+        return (float)Math.Round((double)finalPayoff, 2); //round to 2 decimal place
     }
 }

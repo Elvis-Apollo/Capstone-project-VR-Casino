@@ -2,7 +2,7 @@
 
 /*
  * Author: Aleem Haq
- * Data: March 2020 * 
+ * Date: March 2020 * 
  * This class is a Slot machine object for a SlotMachine_x.json data type
  */
 public class Admin_SlotMachineObject
