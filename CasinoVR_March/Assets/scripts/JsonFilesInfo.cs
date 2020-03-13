@@ -8,7 +8,7 @@
  */
 public static class JsonFilesInfo
 {
-    public static Dictionary<string, string> FileDict = new Dictionary<string, string>() {
+    public static Dictionary<string, string> SlotMachine_Json_FilePaths = new Dictionary<string, string>() {
         {"SlotMachine_1", "Assets/scripts/Json_files/SlotMachine_1.json"},
         {"SlotMachine_2", "Assets/scripts/Json_files/SlotMachine_2.json"},
         {"SlotMachine_3", "Assets/scripts/Json_files/SlotMachine_3.json"},
@@ -19,5 +19,9 @@ public static class JsonFilesInfo
         {"SlotMachine_8", "Assets/scripts/Json_files/SlotMachine_8.json"},
         {"SlotMachine_9", "Assets/scripts/Json_files/SlotMachine_9.json"},
         {"SlotMachine_10", "Assets/scripts/Json_files/SlotMachine_10.json"}
+    };
+
+    public static Dictionary<string, string> HoltLaury_Json_FilePaths = new Dictionary<string, string>() {
+        {"HoltLaury_1", "Assets/scripts/Json_files/HoltLaury_1.json"}
     };
 }
