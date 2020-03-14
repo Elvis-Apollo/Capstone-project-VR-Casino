@@ -4,21 +4,22 @@ using Valve.Newtonsoft.Json;
 
 /*
  * Author: Aleem Haq
- * Data: March 2020
+ * Date: March 2020
  * 
  * This script acts as a state manager for a slot machine.
  * Data is loaded from json files for each SlotMachine_x
  */
 public class SlotMachine_Manager : MonoBehaviour
 {
+    [HideInInspector]
+    public int ReelAResult; // -1 when not set
+
+    [HideInInspector]
+    public int numOfReelsPlayed; // increments after each reel spin ends
 
     public GameObject SlotMachine;
-    //public string JsonName;
-    public string JsonPath;
-
-
-    public int ReelAResult; // -1 when not set
-    public int numOfReelsPlayed; // increments after each reel spin ends
+    public string JsonName;
+    public string JsonPath;    
 
     //private
     private SM_Lever sm_lever;
@@ -32,7 +33,7 @@ public class SlotMachine_Manager : MonoBehaviour
     private void setJsonPath()
     {
         // if current slot machines matches a item.Key from JsonFilesInfo.FileDict, then assign the jsonPath of item.Value
-        foreach (var item in JsonFilesInfo.FileDict)
+        foreach (var item in JsonFilesInfo.SlotMachine_Json_FilePaths)
         {
             // if current game object maches some SlotMachine_x name from dictionary
             if (SlotMachine.Equals(GameObject.Find(item.Key)))
@@ -56,9 +57,13 @@ public class SlotMachine_Manager : MonoBehaviour
         sm_reels = this.GetComponentsInChildren<SM_Reel>();
         setJsonPath();
         admin = JsonConvert.DeserializeObject<Admin_SlotMachineObject>(File.ReadAllText(@JsonPath));
+        JsonName = admin.ObjectName;
 
-        //JsonName = (admin == null) ? "SM_1" : admin.ObjectName;
-        //JsonName = admin.ObjectName ?? "SM_1";
+
+        var holt_laury_obj = JsonConvert.DeserializeObject<HoltLoaryObj>(File.ReadAllText(@"Assets/scripts/Json_files/HoltLaury_1.json"));
+
+        Debug.Log(this.name + " Win Payoff Amount: " + holt_laury_obj.getPayoff());
+
 
         Tries_Left_Count = admin.OutcomeList.Count;
 

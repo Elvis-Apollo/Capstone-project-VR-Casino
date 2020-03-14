@@ -2,7 +2,7 @@
 
 /*
  * Author: Aleem Haq
- * Data: March 2020
+ * Date: March 2020
  * 
  * Enum for OutCome Type
  */

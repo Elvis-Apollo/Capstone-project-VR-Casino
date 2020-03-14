@@ -3,7 +3,7 @@ using UnityEngine;
 
 /*
  * Author: Aleem Haq
- * Data: March 2020
+ * Date: March 2020
  * 
  * This script is responsible for rotating each reel and showing outcome based off SlotMachine_Manager 
  */
@@ -13,6 +13,7 @@ public class SM_Reel : MonoBehaviour
     [HideInInspector]
     public bool ReelSpinning;
 
+    
     // outcome angles[] indices represent the icons below:
     //0 = crown, 1 = waterMelon, 2 = bar, 
     //3= seven, 4 = cherry, 5 = lemon, 6 = diamond 
@@ -20,21 +21,22 @@ public class SM_Reel : MonoBehaviour
 
     private OutcomeType current_outcome; // current outcome for this turn(W,L,NM)
     public float ReelsSpinSpeed;    // set reelspin in start()
-
+    
     // Use this for initialization
     void Start()
     {
-        ReelsSpinSpeed = 5.0f;
+        ReelsSpinSpeed = 4.0f;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        //track location of where reel ends
         if (ReelSpinning)
         {
+
             this.transform.Rotate(ReelsSpinSpeed, 0.0f, 0.0f, Space.Self); // rotation speed of a reel
-        }
+        }     
     }
 
     public void Start_Script_Then_End(float stopTime, OutcomeType outcome)
@@ -42,7 +44,7 @@ public class SM_Reel : MonoBehaviour
         ReelSpinning = true;
         enabled = true;
         current_outcome = outcome;
-        StopRand(stopTime);
+        StopRand(stopTime);        
     }
 
     public void EndScript()
@@ -108,7 +110,6 @@ public class SM_Reel : MonoBehaviour
             sm_manager.numOfReelsPlayed++; // this increments number of times a reel has spun
         }
         enabled = false;
-
         ReelSpinning = false;
     }
 
