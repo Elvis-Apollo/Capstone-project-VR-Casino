@@ -570,7 +570,7 @@ Transform:
   - {fileID: 868976560}
   - {fileID: 374453827}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &66047381
 GameObject:
@@ -1575,7 +1575,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: -1, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0079860585, y: 1.3339994, z: 1.475003}
+  m_ConnectedAnchor: {x: -0.007987618, y: 1.3339866, z: 1.4750042}
   m_UseSpring: 1
   m_Spring:
     spring: 0
@@ -4598,7 +4598,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 428928, guid: 73ac470d3d909d645a6c89a4664b6849, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 198004, guid: 73ac470d3d909d645a6c89a4664b6849, type: 2}
       propertyPath: m_IsActive
@@ -5895,7 +5895,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: -1, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.007988387, y: 1.333988, z: 1.4750004}
+  m_ConnectedAnchor: {x: -0.007986128, y: 1.3339926, z: 1.4750013}
   m_UseSpring: 1
   m_Spring:
     spring: 0
@@ -6076,7 +6076,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 475244, guid: 7a135b1a2cb9c8f488d4dd00c55ab283, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 475244, guid: 7a135b1a2cb9c8f488d4dd00c55ab283, type: 2}
       propertyPath: m_LocalScale.x
@@ -6614,7 +6614,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: -1, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.007989365, y: 1.3339764, z: 1.4750009}
+  m_ConnectedAnchor: {x: -0.007986128, y: 1.3339807, z: 1.4750013}
   m_UseSpring: 1
   m_Spring:
     spring: 0
@@ -7602,7 +7602,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11450312, guid: dc06161b6d97feb419f45f03b62e14b9, type: 2}
       propertyPath: renderModelPrefab
