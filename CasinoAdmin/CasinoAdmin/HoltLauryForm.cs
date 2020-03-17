@@ -67,5 +67,23 @@ namespace CasinoAdmin
         {
             Console.WriteLine("OK button clicked");
         }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // HoltLauryForm
+            // 
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Name = "HoltLauryForm";
+            this.Load += new System.EventHandler(this.HoltLauryForm_Load);
+            this.ResumeLayout(false);
+
+        }
+
+        private void HoltLauryForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
