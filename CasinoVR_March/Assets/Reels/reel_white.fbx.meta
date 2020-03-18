@@ -1,15 +1,14 @@
 fileFormatVersion: 2
-guid: 0796d6e06c1fd5243bed85332b6e3e8e
+guid: 3bf4e371d765b234c958849177f7d9ff
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: silverChrome
-    2100002: blackPlastic
+    2100000: image
     2300000: //RootNode
     3300000: //RootNode
-    4300000: cabinet
+    4300000: Cylinder
   externalObjects: {}
   materials:
     importMaterials: 1
