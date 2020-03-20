@@ -48,12 +48,11 @@
             this.listBox_slotMach = new System.Windows.Forms.ListBox();
             this.addNearMiss_btn_slotMach = new System.Windows.Forms.Button();
             this.addWin_btn_slotMach = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.panel_sm_header = new System.Windows.Forms.Panel();
             this.slotMachine_comboBox = new System.Windows.Forms.ComboBox();
             this.saveAll_btn = new System.Windows.Forms.Button();
             this.restoreAllDefaults_btn = new System.Windows.Forms.Button();
+            this.saveSM_btn = new System.Windows.Forms.Button();
             this.panel_sm_body.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reelD_spinTime_counter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reelC_spinTime_counter)).BeginInit();
@@ -64,6 +63,7 @@
             // 
             // panel_sm_body
             // 
+            this.panel_sm_body.Controls.Add(this.saveSM_btn);
             this.panel_sm_body.Controls.Add(this.sm_title_label);
             this.panel_sm_body.Controls.Add(this.restoreDefaults_slotMac_btn);
             this.panel_sm_body.Controls.Add(this.reelD_spinTime_counter);
@@ -83,7 +83,6 @@
             this.panel_sm_body.Controls.Add(this.listBox_slotMach);
             this.panel_sm_body.Controls.Add(this.addNearMiss_btn_slotMach);
             this.panel_sm_body.Controls.Add(this.addWin_btn_slotMach);
-            this.panel_sm_body.Controls.Add(this.button1);
             this.panel_sm_body.Location = new System.Drawing.Point(12, 131);
             this.panel_sm_body.Name = "panel_sm_body";
             this.panel_sm_body.Size = new System.Drawing.Size(1012, 605);
@@ -103,7 +102,7 @@
             // 
             this.restoreDefaults_slotMac_btn.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.restoreDefaults_slotMac_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.restoreDefaults_slotMac_btn.Location = new System.Drawing.Point(786, 12);
+            this.restoreDefaults_slotMac_btn.Location = new System.Drawing.Point(786, 392);
             this.restoreDefaults_slotMac_btn.Name = "restoreDefaults_slotMac_btn";
             this.restoreDefaults_slotMac_btn.Size = new System.Drawing.Size(197, 50);
             this.restoreDefaults_slotMac_btn.TabIndex = 35;
@@ -115,7 +114,7 @@
             // reelD_spinTime_counter
             // 
             this.reelD_spinTime_counter.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reelD_spinTime_counter.Location = new System.Drawing.Point(711, 268);
+            this.reelD_spinTime_counter.Location = new System.Drawing.Point(750, 268);
             this.reelD_spinTime_counter.Name = "reelD_spinTime_counter";
             this.reelD_spinTime_counter.Size = new System.Drawing.Size(120, 28);
             this.reelD_spinTime_counter.TabIndex = 34;
@@ -124,7 +123,7 @@
             // reelC_spinTime_counter
             // 
             this.reelC_spinTime_counter.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reelC_spinTime_counter.Location = new System.Drawing.Point(711, 213);
+            this.reelC_spinTime_counter.Location = new System.Drawing.Point(750, 213);
             this.reelC_spinTime_counter.Name = "reelC_spinTime_counter";
             this.reelC_spinTime_counter.Size = new System.Drawing.Size(120, 28);
             this.reelC_spinTime_counter.TabIndex = 33;
@@ -133,7 +132,7 @@
             // reelB_spinTime_counter
             // 
             this.reelB_spinTime_counter.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reelB_spinTime_counter.Location = new System.Drawing.Point(711, 153);
+            this.reelB_spinTime_counter.Location = new System.Drawing.Point(750, 153);
             this.reelB_spinTime_counter.Name = "reelB_spinTime_counter";
             this.reelB_spinTime_counter.Size = new System.Drawing.Size(120, 28);
             this.reelB_spinTime_counter.TabIndex = 32;
@@ -142,7 +141,7 @@
             // reelA_spinTime_counter
             // 
             this.reelA_spinTime_counter.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reelA_spinTime_counter.Location = new System.Drawing.Point(711, 99);
+            this.reelA_spinTime_counter.Location = new System.Drawing.Point(750, 99);
             this.reelA_spinTime_counter.Name = "reelA_spinTime_counter";
             this.reelA_spinTime_counter.Size = new System.Drawing.Size(120, 28);
             this.reelA_spinTime_counter.TabIndex = 31;
@@ -152,7 +151,7 @@
             // 
             this.reelD_spinTime_label.AutoSize = true;
             this.reelD_spinTime_label.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reelD_spinTime_label.Location = new System.Drawing.Point(518, 270);
+            this.reelD_spinTime_label.Location = new System.Drawing.Point(557, 270);
             this.reelD_spinTime_label.Name = "reelD_spinTime_label";
             this.reelD_spinTime_label.Size = new System.Drawing.Size(190, 21);
             this.reelD_spinTime_label.TabIndex = 30;
@@ -162,7 +161,7 @@
             // 
             this.reelC_spinTime_label.AutoSize = true;
             this.reelC_spinTime_label.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reelC_spinTime_label.Location = new System.Drawing.Point(518, 213);
+            this.reelC_spinTime_label.Location = new System.Drawing.Point(557, 213);
             this.reelC_spinTime_label.Name = "reelC_spinTime_label";
             this.reelC_spinTime_label.Size = new System.Drawing.Size(189, 21);
             this.reelC_spinTime_label.TabIndex = 29;
@@ -172,7 +171,7 @@
             // 
             this.reelB_spinTime_label.AutoSize = true;
             this.reelB_spinTime_label.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reelB_spinTime_label.Location = new System.Drawing.Point(517, 153);
+            this.reelB_spinTime_label.Location = new System.Drawing.Point(556, 153);
             this.reelB_spinTime_label.Name = "reelB_spinTime_label";
             this.reelB_spinTime_label.Size = new System.Drawing.Size(188, 21);
             this.reelB_spinTime_label.TabIndex = 28;
@@ -182,7 +181,7 @@
             // 
             this.reelA_spinTime_label.AutoSize = true;
             this.reelA_spinTime_label.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reelA_spinTime_label.Location = new System.Drawing.Point(516, 99);
+            this.reelA_spinTime_label.Location = new System.Drawing.Point(555, 99);
             this.reelA_spinTime_label.Name = "reelA_spinTime_label";
             this.reelA_spinTime_label.Size = new System.Drawing.Size(189, 21);
             this.reelA_spinTime_label.TabIndex = 27;
@@ -294,23 +293,9 @@
             this.addWin_btn_slotMach.UseVisualStyleBackColor = true;
             this.addWin_btn_slotMach.Click += new System.EventHandler(this.addWin_btn_slotMach_Click);
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(564, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(175, 50);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Choose Folder";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // folderBrowserDialog1
-            // 
-            this.folderBrowserDialog1.HelpRequest += new System.EventHandler(this.folderBrowserDialog1_HelpRequest);
-            // 
             // panel_sm_header
             // 
+            this.panel_sm_header.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel_sm_header.Controls.Add(this.slotMachine_comboBox);
             this.panel_sm_header.Controls.Add(this.saveAll_btn);
             this.panel_sm_header.Controls.Add(this.restoreAllDefaults_btn);
@@ -334,12 +319,13 @@
             // 
             this.saveAll_btn.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveAll_btn.ForeColor = System.Drawing.Color.Black;
-            this.saveAll_btn.Location = new System.Drawing.Point(564, 24);
+            this.saveAll_btn.Location = new System.Drawing.Point(559, 26);
             this.saveAll_btn.Name = "saveAll_btn";
             this.saveAll_btn.Size = new System.Drawing.Size(175, 50);
             this.saveAll_btn.TabIndex = 11;
             this.saveAll_btn.Text = "Save All";
             this.saveAll_btn.UseVisualStyleBackColor = true;
+            this.saveAll_btn.Click += new System.EventHandler(this.saveAll_btn_Click);
             // 
             // restoreAllDefaults_btn
             // 
@@ -352,6 +338,18 @@
             this.restoreAllDefaults_btn.Text = "Restore All Defaults";
             this.restoreAllDefaults_btn.UseVisualStyleBackColor = true;
             this.restoreAllDefaults_btn.Click += new System.EventHandler(this.restoreAllDefaults_btn_Click);
+            // 
+            // saveSM_btn
+            // 
+            this.saveSM_btn.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveSM_btn.Location = new System.Drawing.Point(559, 393);
+            this.saveSM_btn.Name = "saveSM_btn";
+            this.saveSM_btn.Size = new System.Drawing.Size(175, 49);
+            this.saveSM_btn.TabIndex = 37;
+            this.saveSM_btn.Tag = "SlotMachine";
+            this.saveSM_btn.Text = "Save";
+            this.saveSM_btn.UseVisualStyleBackColor = true;
+            this.saveSM_btn.Click += new System.EventHandler(this.saveSM_btn_Click);
             // 
             // SlotMachineForm
             // 
@@ -375,8 +373,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel_sm_body;
-        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel_sm_header;
         private System.Windows.Forms.Label reelD_spinTime_label;
         private System.Windows.Forms.Label reelC_spinTime_label;
@@ -400,5 +396,6 @@
         private System.Windows.Forms.ComboBox slotMachine_comboBox;
         private System.Windows.Forms.Button restoreDefaults_slotMac_btn;
         private System.Windows.Forms.Label sm_title_label;
+        private System.Windows.Forms.Button saveSM_btn;
     }
 }

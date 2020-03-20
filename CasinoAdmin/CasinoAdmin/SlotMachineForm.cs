@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,6 +15,8 @@ namespace CasinoAdmin
     public partial class SlotMachineForm : Form
     {
         //************************** Class Variables ******************************************
+
+        private string jsonDirectory;  //json directory for slot machines.json
 
         //------------------------ Outcome lists for each slot machine ------------------------
         private List<OutCome> outcomeList_slotMachine_1 = new List<OutCome> { };
@@ -167,6 +170,31 @@ namespace CasinoAdmin
         //**************** Helpers Functions *****************************************************
 
 
+
+        //------------------------ Delegate for converting all items in outcome list to string --------------------------------
+        private String outComeToString(OutCome outcome)
+        {
+            return outcome.ToString();
+        }
+
+        //------------------------ Write selected slot machine to json file --------------------------------
+        private void writeJsonToFile(SlotMachine slotMach)
+        {
+            string jsonOutputPath = jsonDirectory;
+            string fileName = "";
+            SlotMachineObj slotObj;
+
+            List<String> outcomeStringList = getOutcomeListOfSlotMachine(slotMach).ConvertAll(new Converter<OutCome, string>(outComeToString)); // get outcome string list
+
+            slotObj = new SlotMachineObj() { ObjectName = slotMach.ToString(), OutcomeList = outcomeStringList, ReelSpinTime = getReelListOfSlotMachine(slotMach) }; //create object
+            fileName = slotObj.ObjectName;
+
+            TextWriter txt = new StreamWriter(jsonOutputPath + "\\" + fileName + ".json"); // SlotMachine_x.json
+            txt.Write(JsonSerializer.Serialize(slotObj));
+            txt.Close();
+        }
+
+
         //------------------------ Randomize a list of outcomes --------------------------------
         private void outcomeListRandomizer(List<OutCome> listToRandomize)
         {
@@ -189,6 +217,16 @@ namespace CasinoAdmin
             foreach (OutCome outcome in overwriteFromList)
             {
                 listToOverwrite.Add(outcome);
+            }
+        }
+
+        //------------------------ overwrites a reel list with another --------------------------------
+        private void overwriteReelList(List<float> listToOverwrite, List<float> overwriteFromList)
+        {
+            listToOverwrite.Clear();
+            foreach (float timeVal in overwriteFromList)
+            {
+                listToOverwrite.Add(timeVal);
             }
         }
 
@@ -255,35 +293,11 @@ namespace CasinoAdmin
 
         //**************** Gui Action Functions **************************************************
 
-        //------------------------ REMOVE ME--------------------------------
-        private void folderBrowserDialog1_HelpRequest(object sender, EventArgs e)
-        {
-
-        }
-
         //------------------------ When Form loads --------------------------------
         private void SlotMachineForm_Load_1(object sender, EventArgs e)
         {
-
+            jsonDirectory = MainForm.JsonFolderDirectory;
         }
-
-        //------------------------ choose folder button--------------------------------
-        private void button1_Click(object sender, EventArgs e)
-        {
-            DialogResult result = folderBrowserDialog1.ShowDialog();
-            if (result == DialogResult.OK)
-            {
-                //
-                // The user selected a folder and pressed the OK button.
-                // We print the number of files found.
-                //
-                string[] files = Directory.GetFiles(folderBrowserDialog1.SelectedPath);
-                MessageBox.Show("Files found: " + files.Length.ToString(), "Message");
-
-            }
-        }
-
-
 
         // ---- Set the selected SM outcome list to list box ----------
         private void setSelectedSmToListBox()
@@ -456,27 +470,21 @@ namespace CasinoAdmin
             updateListBoxCountLabel(); // update list count
 
             setReelCountersToDefaultReelList(); // set reel counters to default vals
-        }
-
-        // ---- Restore ALL defaults for all values of slot machine json and UI objects ------
-        private void restoreAllDefaults_btn_Click(object sender, EventArgs e)
-        {
-
-        }
+        }        
 
         // ---- Set ReelA counter's value to  selected Slotmachines reel list ------
         private void reelA_spinTime_counter_ValueChanged(object sender, EventArgs e)
-        {            
+        {
             if (slotMachine_comboBox.SelectedItem != null)
             {
                 getReelListOfSlotMachine((SlotMachine)slotMachine_comboBox.SelectedItem)[0] = (float)reelA_spinTime_counter.Value;
-            }            
-            
-    }
+            }
+
+        }
 
         // ---- Set ReelB counter's value to  selected Slotmachines reel list ------
         private void reelB_spinTime_counter_ValueChanged(object sender, EventArgs e)
-        {            
+        {
             if (slotMachine_comboBox.SelectedItem != null)
             {
                 getReelListOfSlotMachine((SlotMachine)slotMachine_comboBox.SelectedItem)[1] = (float)reelB_spinTime_counter.Value;
@@ -485,7 +493,7 @@ namespace CasinoAdmin
 
         // ---- Set ReelC counter's value to  selected Slotmachines reel list ------
         private void reelC_spinTime_counter_ValueChanged(object sender, EventArgs e)
-        {            
+        {
             if (slotMachine_comboBox.SelectedItem != null)
             {
                 getReelListOfSlotMachine((SlotMachine)slotMachine_comboBox.SelectedItem)[2] = (float)reelC_spinTime_counter.Value;
@@ -494,10 +502,68 @@ namespace CasinoAdmin
 
         // ---- Set ReelD counter's value to  selected Slotmachines reel list ------
         private void reelD_spinTime_counter_ValueChanged(object sender, EventArgs e)
-        {            
+        {
             if (slotMachine_comboBox.SelectedItem != null)
             {
                 getReelListOfSlotMachine((SlotMachine)slotMachine_comboBox.SelectedItem)[3] = (float)reelD_spinTime_counter.Value;
+            }
+        }
+
+        // ----------------- saves current slot machine to json file, based off selected folder from admin menu ----------------
+        private void saveSM_btn_Click(object sender, EventArgs e)
+        {
+            writeJsonToFile((SlotMachine) slotMachine_comboBox.SelectedItem);
+        }
+
+        // ----------------- saves All slot machines to json files, based off selected folder from admin menu ----------------
+        private void saveAll_btn_Click(object sender, EventArgs e)
+        {
+            writeJsonToFile(SlotMachine.SlotMachine_1);
+            writeJsonToFile(SlotMachine.SlotMachine_2);
+            writeJsonToFile(SlotMachine.SlotMachine_3);
+            writeJsonToFile(SlotMachine.SlotMachine_4);
+            writeJsonToFile(SlotMachine.SlotMachine_5);
+            writeJsonToFile(SlotMachine.SlotMachine_6);
+            writeJsonToFile(SlotMachine.SlotMachine_7);
+            writeJsonToFile(SlotMachine.SlotMachine_8);
+            writeJsonToFile(SlotMachine.SlotMachine_9);
+            writeJsonToFile(SlotMachine.SlotMachine_10);
+        }
+
+        // ---- Restore ALL defaults for all values of slot machine json and UI objects ------
+        private void restoreAllDefaults_btn_Click(object sender, EventArgs e)
+        {
+            //rewrite all outcome lists to defaults
+            overwriteOutComeList(outcomeList_slotMachine_1, outcomeList_defaults);
+            overwriteOutComeList(outcomeList_slotMachine_2, outcomeList_defaults);
+            overwriteOutComeList(outcomeList_slotMachine_3, outcomeList_defaults);
+            overwriteOutComeList(outcomeList_slotMachine_4, outcomeList_defaults);
+            overwriteOutComeList(outcomeList_slotMachine_5, outcomeList_defaults);
+            overwriteOutComeList(outcomeList_slotMachine_6, outcomeList_defaults);
+            overwriteOutComeList(outcomeList_slotMachine_7, outcomeList_defaults);
+            overwriteOutComeList(outcomeList_slotMachine_8, outcomeList_defaults);
+            overwriteOutComeList(outcomeList_slotMachine_9, outcomeList_defaults);
+            overwriteOutComeList(outcomeList_slotMachine_10, outcomeList_defaults);
+
+            //rewrite all reel lists to defaults
+            overwriteReelList(spinReelsTime_slotMachine_1, spinReels_defaults);
+            overwriteReelList(spinReelsTime_slotMachine_2, spinReels_defaults);
+            overwriteReelList(spinReelsTime_slotMachine_3, spinReels_defaults);
+            overwriteReelList(spinReelsTime_slotMachine_4, spinReels_defaults);
+            overwriteReelList(spinReelsTime_slotMachine_5, spinReels_defaults);
+            overwriteReelList(spinReelsTime_slotMachine_6, spinReels_defaults);
+            overwriteReelList(spinReelsTime_slotMachine_7, spinReels_defaults);
+            overwriteReelList(spinReelsTime_slotMachine_8, spinReels_defaults);
+            overwriteReelList(spinReelsTime_slotMachine_9, spinReels_defaults);
+            overwriteReelList(spinReelsTime_slotMachine_10, spinReels_defaults);
+
+            
+            if (slotMachine_comboBox.SelectedIndex >= 0) { 
+            setListBoxToSelectedSlotMachOutcomeList(); // set list box to the outcome list
+
+            updateListBoxCountLabel(); // update list count
+
+            setReelCountersToDefaultReelList(); // set reel counters to default vals
             }
         }
     }

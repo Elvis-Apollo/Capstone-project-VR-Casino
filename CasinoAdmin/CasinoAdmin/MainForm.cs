@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,12 @@ namespace CasinoAdmin
 {
     public partial class MainForm : Form
     {
+        public static string JsonFolderDirectory = "";
+
+        private FolderBrowserDialog folderBrowsePopup;
+
+        private string directoryLabelText = "Selected directory: ";
+
         public MainForm()
         {
             InitializeComponent();
@@ -20,24 +27,20 @@ namespace CasinoAdmin
             panel_admin.SendToBack();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Main_Form_Load(object sender, EventArgs e)
         {
+            folderBrowsePopup = new FolderBrowserDialog(); // create new folder browser dialog
+            directory_label.Text = directoryLabelText + "None, Please select a folder.";
 
+            // if json folder already saved, then load that path
+            string currentPath = Directory.GetCurrentDirectory() + "\\path.txt";            
+            if (File.Exists(currentPath))
+            {
+                string pathText = System.IO.File.ReadAllText(@"" + currentPath);
+                JsonFolderDirectory = pathText;
+                directory_label.Text = directoryLabelText + JsonFolderDirectory;
+            }
         }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        // create holt laury form
-        /*   private void button1_Click(object sender, EventArgs e)
-           {
-               // create holt laury form 
-               HoltLauryForm hl_form = new HoltLauryForm();
-               hl_form.CreateHoltLauryForm();
-               //this.Hide();
-           }*/
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -57,6 +60,7 @@ namespace CasinoAdmin
         private void button_Admin_main_Click(object sender, EventArgs e)
         {
             // Add log in check here
+            MessageBox.Show("Admin logged in!", "Authorization");
             //this leads to Admin state on MainForm
 
             panel_main.Visible = false;
@@ -64,29 +68,58 @@ namespace CasinoAdmin
 
             panel_admin.BringToFront();
             panel_admin.Visible = true;
-
-
-            //AdminForm admin_form = new AdminForm() { Dock = DockStyle.Fill };
-            //this.Controls.Add(admin_form);
-            //this.panel_main.Controls.Add(admin_form);
-
-            /*admin_form.ShowDialog();
-            this.Close();
-*/
-            //admin_form.CreateAdminForm();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void payoff_btn_Click(object sender, EventArgs e)
         {
-
+            if (JsonFolderDirectory == "") // if folder has not been set yet
+            {
+                MessageBox.Show("Please select json folder first.", "Error");
+            }
+            else
+            {
+                Console.WriteLine("Payoff button clicked");
+            }
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void slotMach_btn_Click(object sender, EventArgs e)
         {
-            // create admin form 
-            SlotMachineForm admin_form = new SlotMachineForm();
-            admin_form.ShowDialog();
-            //admin_form.CreateAdminForm();  
+            if (JsonFolderDirectory == "") // if folder has not been set yet
+            {
+                MessageBox.Show("Please select json folder first.", "Error");
+            }
+            else
+            {
+                // create slot mach form 
+                SlotMachineForm slotMach_form = new SlotMachineForm();
+                slotMach_form.ShowDialog();
+            }
+        }
+
+        private void sel_folder_btn_Click(object sender, EventArgs e)
+        {
+            string path = "\\path.txt";
+            string currentPath = Directory.GetCurrentDirectory() + path;
+
+            DialogResult dialogResult = folderBrowsePopup.ShowDialog();
+            if (dialogResult == DialogResult.OK) // if able to select a  folder
+            {
+                // The user selected a folder and pressed the OK button.
+                
+                string[] files = Directory.GetFiles(folderBrowsePopup.SelectedPath);             
+                MessageBox.Show("Files found: " + files.Length.ToString(), "Message");
+
+                JsonFolderDirectory = folderBrowsePopup.SelectedPath; // set global directory string
+                directory_label.Text = directoryLabelText + folderBrowsePopup.SelectedPath; // set directory text
+
+                //save json folder path to text file
+                TextWriter txtWrite = new StreamWriter(currentPath);
+                txtWrite.WriteLine(JsonFolderDirectory);
+                txtWrite.Close();
+
+            }
+
+            
         }
     }
 }
