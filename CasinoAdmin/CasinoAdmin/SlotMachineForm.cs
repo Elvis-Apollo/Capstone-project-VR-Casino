@@ -43,9 +43,9 @@ namespace CasinoAdmin
 
         //------------------------Default list values for outcomes and Reels spin time----------
         // outcome list
-        private List<OutCome> outcomeList_default = new List<OutCome> { OutCome.W, OutCome.W, OutCome.L, OutCome.NM, OutCome.L };
+        private List<OutCome> outcomeList_defaults = new List<OutCome> { OutCome.W, OutCome.W, OutCome.L, OutCome.NM, OutCome.L };
         // reels spin time
-        private List<float> spinReels_default = new List<float> { 3.0f, 4.0f, 5.0f, 6.0f }; //[3,4,5,6]
+        private List<float> spinReels_defaults = new List<float> { 3.0f, 4.0f, 5.0f, 6.0f }; //[3,4,5,6]
 
 
         //------------------------ Outcome Type Enum ------------------------------------------
@@ -87,6 +87,9 @@ namespace CasinoAdmin
 
             initOutcomeListsWithDefaults();
 
+            initSpinReelsTimeWithDefaults();
+
+
             initSlotMachComboBox();
 
             panel_sm_body.Visible = false;  // slotmachine body panel hidden until a slotmachine is selected from combo box
@@ -110,17 +113,55 @@ namespace CasinoAdmin
         private void initOutcomeListsWithDefaults()
         {
             // init with defaults if json file not found in directory.
-            overwriteOutComeList(outcomeList_slotMachine_1, outcomeList_default);
-            overwriteOutComeList(outcomeList_slotMachine_2, outcomeList_default);
-            overwriteOutComeList(outcomeList_slotMachine_3, outcomeList_default);
-            overwriteOutComeList(outcomeList_slotMachine_4, outcomeList_default);
-            overwriteOutComeList(outcomeList_slotMachine_5, outcomeList_default);
-            overwriteOutComeList(outcomeList_slotMachine_6, outcomeList_default);
-            overwriteOutComeList(outcomeList_slotMachine_7, outcomeList_default);
-            overwriteOutComeList(outcomeList_slotMachine_8, outcomeList_default);
-            overwriteOutComeList(outcomeList_slotMachine_9, outcomeList_default);
-            overwriteOutComeList(outcomeList_slotMachine_10, outcomeList_default);
+            overwriteOutComeList(outcomeList_slotMachine_1, outcomeList_defaults);
+            overwriteOutComeList(outcomeList_slotMachine_2, outcomeList_defaults);
+            overwriteOutComeList(outcomeList_slotMachine_3, outcomeList_defaults);
+            overwriteOutComeList(outcomeList_slotMachine_4, outcomeList_defaults);
+            overwriteOutComeList(outcomeList_slotMachine_5, outcomeList_defaults);
+            overwriteOutComeList(outcomeList_slotMachine_6, outcomeList_defaults);
+            overwriteOutComeList(outcomeList_slotMachine_7, outcomeList_defaults);
+            overwriteOutComeList(outcomeList_slotMachine_8, outcomeList_defaults);
+            overwriteOutComeList(outcomeList_slotMachine_9, outcomeList_defaults);
+            overwriteOutComeList(outcomeList_slotMachine_10, outcomeList_defaults);
 
+        }
+
+        //---------------------- Init all the spinTime counter mask(1 decimal point and 0.1 counter) -------------        
+        private void initSpinReelsTimeWithDefaults()
+        {
+            // init with defaults if json file not found in directory
+
+            //reela
+            reelA_spinTime_counter.DecimalPlaces = 1;
+            reelA_spinTime_counter.Increment = 0.1M;
+            reelA_spinTime_counter.Value = Convert.ToDecimal(spinReels_defaults[0]);
+            //reelb
+            reelB_spinTime_counter.DecimalPlaces = 1;
+            reelB_spinTime_counter.Increment = 0.1M;
+            reelB_spinTime_counter.Value = Convert.ToDecimal(spinReels_defaults[1]);
+            //reelc
+            reelC_spinTime_counter.DecimalPlaces = 1;
+            reelC_spinTime_counter.Increment = 0.1M;
+            reelC_spinTime_counter.Value = Convert.ToDecimal(spinReels_defaults[2]);
+            //reeld
+            reelD_spinTime_counter.DecimalPlaces = 1;
+            reelD_spinTime_counter.Increment = 0.1M;
+            reelD_spinTime_counter.Value = Convert.ToDecimal(spinReels_defaults[3]);
+
+            // init data lists with default values            
+            foreach (float spinDefaults in spinReels_defaults)
+            {
+                spinReelsTime_slotMachine_1.Add(spinDefaults);
+                spinReelsTime_slotMachine_2.Add(spinDefaults);
+                spinReelsTime_slotMachine_3.Add(spinDefaults);
+                spinReelsTime_slotMachine_4.Add(spinDefaults);
+                spinReelsTime_slotMachine_5.Add(spinDefaults);
+                spinReelsTime_slotMachine_6.Add(spinDefaults);
+                spinReelsTime_slotMachine_7.Add(spinDefaults);
+                spinReelsTime_slotMachine_8.Add(spinDefaults);
+                spinReelsTime_slotMachine_9.Add(spinDefaults);
+                spinReelsTime_slotMachine_10.Add(spinDefaults);
+            }
         }
 
         //**************** Helpers Functions *****************************************************
@@ -142,16 +183,16 @@ namespace CasinoAdmin
         }
 
         //------------------------ overwrites a outcome list with another --------------------------------
-        private void overwriteOutComeList(List<OutCome> listToOverwrite, List<OutCome> overwireFromList)
+        private void overwriteOutComeList(List<OutCome> listToOverwrite, List<OutCome> overwriteFromList)
         {
             listToOverwrite.Clear();
-            foreach (OutCome outcome in overwireFromList)
+            foreach (OutCome outcome in overwriteFromList)
             {
                 listToOverwrite.Add(outcome);
             }
         }
 
-        // ---- Gets outcome list based off current combobox selection------
+        // ---- Gets outcome list based off a combobox selection------
         private List<OutCome> getOutcomeListOfSlotMachine(SlotMachine sm)
         {
             switch (sm)
@@ -177,7 +218,38 @@ namespace CasinoAdmin
                 case SlotMachine.SlotMachine_10:
                     return outcomeList_slotMachine_10;
                 default:
-                    return outcomeList_default;
+                    return outcomeList_defaults;
+            }
+        }
+
+        // ---- Gets reel spin time list based off a combobox selection------
+        private List<float> getReelListOfSlotMachine(SlotMachine sm)
+        {
+            switch (sm)
+            {
+                case SlotMachine.SlotMachine_1:
+                    return spinReelsTime_slotMachine_1;
+                case SlotMachine.SlotMachine_2:
+                    return spinReelsTime_slotMachine_2;
+                case SlotMachine.SlotMachine_3:
+                    return spinReelsTime_slotMachine_3;
+                case SlotMachine.SlotMachine_4:
+                    return spinReelsTime_slotMachine_4;
+                case SlotMachine.SlotMachine_5:
+                    return spinReelsTime_slotMachine_5;
+                case SlotMachine.SlotMachine_6:
+                    return spinReelsTime_slotMachine_6;
+                case SlotMachine.SlotMachine_7:
+                    return spinReelsTime_slotMachine_7;
+                case SlotMachine.SlotMachine_8:
+                    return spinReelsTime_slotMachine_8;
+                case SlotMachine.SlotMachine_9:
+                    return spinReelsTime_slotMachine_9;
+                case SlotMachine.SlotMachine_10:
+                    return spinReelsTime_slotMachine_10;
+                default:
+                    Console.WriteLine("DEFAULT CASE");
+                    return spinReels_defaults;
             }
         }
 
@@ -239,6 +311,23 @@ namespace CasinoAdmin
             setListBoxToSlotMachOutcomeList((SlotMachine)slotMachine_comboBox.SelectedItem);
         }
 
+        // ---- Set reel counters to selected slotmachine's reel list ------
+        private void setReelCountersToSelectedSlotMachReelList()
+        {
+            reelA_spinTime_counter.Value = (decimal)getReelListOfSlotMachine((SlotMachine)slotMachine_comboBox.SelectedItem)[0];
+            reelB_spinTime_counter.Value = (decimal)getReelListOfSlotMachine((SlotMachine)slotMachine_comboBox.SelectedItem)[1];
+            reelC_spinTime_counter.Value = (decimal)getReelListOfSlotMachine((SlotMachine)slotMachine_comboBox.SelectedItem)[2];
+            reelD_spinTime_counter.Value = (decimal)getReelListOfSlotMachine((SlotMachine)slotMachine_comboBox.SelectedItem)[3];
+        }
+
+        // ---- Set reel counters to default reel list ------
+        private void setReelCountersToDefaultReelList()
+        {
+            reelA_spinTime_counter.Value = (decimal)spinReels_defaults[0];
+            reelB_spinTime_counter.Value = (decimal)spinReels_defaults[1];
+            reelC_spinTime_counter.Value = (decimal)spinReels_defaults[2];
+            reelD_spinTime_counter.Value = (decimal)spinReels_defaults[3];
+        }
 
         // ---- Set list box items to a slotmachine's outcome list ------
 
@@ -258,7 +347,7 @@ namespace CasinoAdmin
         // ---- Slot Machine dropdown index change ------
         private void slotMachine_comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SlotMachine selectedSlotMach = (SlotMachine)slotMachine_comboBox.SelectedItem;
+            SlotMachine selectedSlotMach = (SlotMachine)slotMachine_comboBox.SelectedItem; // current combobox selected obj
             sm_title_label.Text = (selectedSlotMach.ToString()).Replace("_", " ");  // set Title to current selected combo box
 
             panel_sm_body.Visible = true;  // enable slot mach body panel
@@ -266,6 +355,8 @@ namespace CasinoAdmin
             setListBoxToSelectedSlotMachOutcomeList();
 
             updateListBoxCountLabel();
+
+            setReelCountersToSelectedSlotMachReelList();
         }
 
         // ---- Updates the listbox count label ------
@@ -348,27 +439,66 @@ namespace CasinoAdmin
 
         // ---- Randomizes the outcome list of selected Slot Machine and updates list box ------
         private void randomizeItems_btn_slotMach_Click(object sender, EventArgs e)
-        {   
+        {
             outcomeListRandomizer(getOutcomeListOfSlotMachine((SlotMachine)slotMachine_comboBox.SelectedItem)); //randomize the selected SM's outcome list
 
-            
+
             setListBoxToSelectedSlotMachOutcomeList(); // set list box to the randomized list
         }
 
         // ---- Restore defaults for the outcome list of selected Slot Machine and updates list box ------
         private void restoreDefaults_slotMac_btn_Click(object sender, EventArgs e)
         {
-            overwriteOutComeList(getOutcomeListOfSlotMachine((SlotMachine)slotMachine_comboBox.SelectedItem), outcomeList_default); //rewrite outcome list to default
+            overwriteOutComeList(getOutcomeListOfSlotMachine((SlotMachine)slotMachine_comboBox.SelectedItem), outcomeList_defaults); //rewrite outcome list to default
 
             setListBoxToSelectedSlotMachOutcomeList(); // set list box to the outcome list
 
             updateListBoxCountLabel(); // update list count
+
+            setReelCountersToDefaultReelList(); // set reel counters to default vals
         }
 
         // ---- Restore ALL defaults for all values of slot machine json and UI objects ------
         private void restoreAllDefaults_btn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        // ---- Set ReelA counter's value to  selected Slotmachines reel list ------
+        private void reelA_spinTime_counter_ValueChanged(object sender, EventArgs e)
+        {            
+            if (slotMachine_comboBox.SelectedItem != null)
+            {
+                getReelListOfSlotMachine((SlotMachine)slotMachine_comboBox.SelectedItem)[0] = (float)reelA_spinTime_counter.Value;
+            }            
+            
+    }
+
+        // ---- Set ReelB counter's value to  selected Slotmachines reel list ------
+        private void reelB_spinTime_counter_ValueChanged(object sender, EventArgs e)
+        {            
+            if (slotMachine_comboBox.SelectedItem != null)
+            {
+                getReelListOfSlotMachine((SlotMachine)slotMachine_comboBox.SelectedItem)[1] = (float)reelB_spinTime_counter.Value;
+            }
+        }
+
+        // ---- Set ReelC counter's value to  selected Slotmachines reel list ------
+        private void reelC_spinTime_counter_ValueChanged(object sender, EventArgs e)
+        {            
+            if (slotMachine_comboBox.SelectedItem != null)
+            {
+                getReelListOfSlotMachine((SlotMachine)slotMachine_comboBox.SelectedItem)[2] = (float)reelC_spinTime_counter.Value;
+            }
+        }
+
+        // ---- Set ReelD counter's value to  selected Slotmachines reel list ------
+        private void reelD_spinTime_counter_ValueChanged(object sender, EventArgs e)
+        {            
+            if (slotMachine_comboBox.SelectedItem != null)
+            {
+                getReelListOfSlotMachine((SlotMachine)slotMachine_comboBox.SelectedItem)[3] = (float)reelD_spinTime_counter.Value;
+            }
         }
     }
 }
