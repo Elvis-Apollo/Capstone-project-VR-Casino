@@ -76,6 +76,7 @@ namespace CasinoAdmin
             // 
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Name = "HoltLauryForm";
+            this.Text = "HoltLauryForm";
             this.Load += new System.EventHandler(this.HoltLauryForm_Load);
             this.ResumeLayout(false);
 
