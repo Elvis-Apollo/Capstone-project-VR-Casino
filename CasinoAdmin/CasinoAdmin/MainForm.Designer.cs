@@ -204,7 +204,7 @@
             this.sel_folder_btn.Name = "sel_folder_btn";
             this.sel_folder_btn.Size = new System.Drawing.Size(224, 53);
             this.sel_folder_btn.TabIndex = 3;
-            this.sel_folder_btn.Text = "Select Scripts Folder";
+            this.sel_folder_btn.Text = "Select Json Folder";
             this.sel_folder_btn.UseVisualStyleBackColor = true;
             this.sel_folder_btn.Click += new System.EventHandler(this.sel_folder_btn_Click);
             // 

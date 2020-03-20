@@ -30,7 +30,7 @@ namespace CasinoAdmin
         private void Main_Form_Load(object sender, EventArgs e)
         {
             folderBrowsePopup = new FolderBrowserDialog(); // create new folder browser dialog
-            directory_label.Text = directoryLabelText + "None, Please select a folder.";
+            directory_label.Text = directoryLabelText + "None, please select a folder.";
 
             // if json folder already saved, then load that path
             string currentPath = Directory.GetCurrentDirectory() + "\\path.txt";            
