@@ -1,16 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Text.Json;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CasinoAdmin
+
+
+    /*
+     * Developed By: Aleem Ul Haq
+     * Date: March 2020
+     * This is a Form class for editing SlotMachine jsons
+     * 
+     */
 {
     public partial class SlotMachineForm : Form
     {

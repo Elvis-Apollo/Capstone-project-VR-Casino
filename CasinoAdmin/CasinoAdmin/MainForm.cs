@@ -1,39 +1,49 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CasinoAdmin
+
+/*
+ * Developed By: Aleem Ul Haq
+ * Date: March 2020
+ * This is a Form class for Main form of the app
+ * 
+ */
 {
     public partial class MainForm : Form
     {
+
+        //************************** Class Variables ******************************************
+
+        //------------------------ json directory for slot machines.json ------------------------
         public static string JsonFolderDirectory = "";
 
+        //------------------------ Visual Variables ------------------------
         private FolderBrowserDialog folderBrowsePopup;
-
         private string directoryLabelText = "Selected directory: ";
 
+        //************************** Constructor ******************************************
         public MainForm()
         {
             InitializeComponent();
             panel_main.BringToFront();
             panel_admin.Visible = false ;
             panel_admin.SendToBack();
-        }
+        } // constructor ends here
 
+
+
+        //********************************* Init **************************************************
+
+        //------------------------ Executed when main form loads ------------------------
         private void Main_Form_Load(object sender, EventArgs e)
         {
             folderBrowsePopup = new FolderBrowserDialog(); // create new folder browser dialog
             directory_label.Text = directoryLabelText + "None, please select a folder.";
 
             // if json folder already saved, then load that path
-            string currentPath = Directory.GetCurrentDirectory() + "\\path.txt";            
+            string currentPath = Directory.GetCurrentDirectory() + "\\path.txt";
             if (File.Exists(currentPath))
             {
                 string pathText = System.IO.File.ReadAllText(@"" + currentPath);
@@ -42,13 +52,14 @@ namespace CasinoAdmin
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            // create admin form 
-            SlotMachineForm admin_form = new SlotMachineForm();
-            //admin_form.CreateAdminForm();            
-        }
+        //**************** Helpers Functions *****************************************************
 
+
+
+        //**************** Gui Action Functions **************************************************
+
+
+        //------------------------ Main HoltLaury test btn ------------------------
         private void button_HLTest_main_Click(object sender, EventArgs e)
         {
             // create holt laury form 
@@ -57,6 +68,8 @@ namespace CasinoAdmin
             //this.Hide();
         }
 
+        //------------------------ Main Admin btn ------------------------
+        // Add login check here
         private void button_Admin_main_Click(object sender, EventArgs e)
         {
             // Add log in check here
@@ -70,6 +83,7 @@ namespace CasinoAdmin
             panel_admin.Visible = true;
         }
 
+        //------------------------ Admin payoff btn ------------------------
         private void payoff_btn_Click(object sender, EventArgs e)
         {
             if (JsonFolderDirectory == "") // if folder has not been set yet
@@ -82,6 +96,7 @@ namespace CasinoAdmin
             }
         }
 
+        //------------------------ SlotMachine btn ------------------------
         private void slotMach_btn_Click(object sender, EventArgs e)
         {
             if (JsonFolderDirectory == "") // if folder has not been set yet
@@ -96,6 +111,8 @@ namespace CasinoAdmin
             }
         }
 
+        //------------------------ Selects folder for json files ------------------------
+        // This must be the unity game/assets/scripts/jsonFiles path
         private void sel_folder_btn_Click(object sender, EventArgs e)
         {
             string path = "\\path.txt";
@@ -116,10 +133,7 @@ namespace CasinoAdmin
                 TextWriter txtWrite = new StreamWriter(currentPath);
                 txtWrite.WriteLine(JsonFolderDirectory);
                 txtWrite.Close();
-
             }
-
-            
         }
     }
 }

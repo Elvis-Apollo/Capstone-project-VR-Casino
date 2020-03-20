@@ -236,8 +236,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1030, 870);
-            this.Controls.Add(this.panel_admin);
             this.Controls.Add(this.panel_main);
+            this.Controls.Add(this.panel_admin);
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.Main_Form_Load);
