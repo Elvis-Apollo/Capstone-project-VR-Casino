@@ -52,6 +52,7 @@ public class SlotMachine_Manager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        //Debug.log("Hello world");
         sm_lever = this.GetComponentInChildren<SM_Lever>();
         sm_button = this.GetComponentInChildren<SM_Button>();
         sm_reels = this.GetComponentsInChildren<SM_Reel>();
@@ -61,13 +62,14 @@ public class SlotMachine_Manager : MonoBehaviour
 
 
         var holt_laury_obj = JsonConvert.DeserializeObject<HoltLoaryObj>(File.ReadAllText(@"Assets/scripts/Json_files/HoltLaury_1.json"));
-
+        //Debug.log(holt_laury_obj);
         Debug.Log(this.name + " Win Payoff Amount: " + holt_laury_obj.getPayoff());
 
 
         Tries_Left_Count = admin.OutcomeList.Count;
 
         Debug.Log(this.name + " Number of total tries to play game: " + Tries_Left_Count);
+        Debug.Log(this.name + " hello world: " + Tries_Left_Count);
 
         ReelAResult = -1; // -1 when not set
         numOfReelsPlayed = 1; // 1 when to start
