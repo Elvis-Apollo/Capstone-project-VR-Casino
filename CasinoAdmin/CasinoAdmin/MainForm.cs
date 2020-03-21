@@ -46,7 +46,8 @@ namespace CasinoAdmin
             string currentPath = Directory.GetCurrentDirectory() + "\\path.txt";
             if (File.Exists(currentPath))
             {
-                string pathText = System.IO.File.ReadAllText(@"" + currentPath).Replace("\n", String.Empty); // remove newline char
+                string pathText = System.IO.File.ReadAllText(@"" + currentPath).Replace("\n", String.Empty).Replace("\t", String.Empty).Replace("\r", String.Empty); // remove newline char
+                JsonFolderDirectory = pathText;
                 directory_label.Text = directoryLabelText + JsonFolderDirectory;
             }
         }
