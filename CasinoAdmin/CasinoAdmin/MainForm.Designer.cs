@@ -35,18 +35,21 @@
             this.button_HLTest_main = new System.Windows.Forms.Button();
             this.panel_admin = new System.Windows.Forms.Panel();
             this.tableLayout_admin = new System.Windows.Forms.TableLayoutPanel();
-            this.admin_header_label = new System.Windows.Forms.Label();
             this.payoff_btn = new System.Windows.Forms.Button();
             this.slotMach_btn = new System.Windows.Forms.Button();
             this.tableLayout_admin_selFolder = new System.Windows.Forms.TableLayoutPanel();
             this.sel_folder_btn = new System.Windows.Forms.Button();
             this.directory_label = new System.Windows.Forms.Label();
             this.folder_dir_example_label = new System.Windows.Forms.Label();
+            this.admin_settings_sub_panel = new System.Windows.Forms.Panel();
+            this.back_toMain_btn = new System.Windows.Forms.Button();
+            this.admin_header_label = new System.Windows.Forms.Label();
             this.panel_main.SuspendLayout();
             this.tableLayout_main.SuspendLayout();
             this.panel_admin.SuspendLayout();
             this.tableLayout_admin.SuspendLayout();
             this.tableLayout_admin_selFolder.SuspendLayout();
+            this.admin_settings_sub_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_main
@@ -125,13 +128,12 @@
             // 
             // tableLayout_admin
             // 
-            this.tableLayout_admin.AutoScroll = true;
             this.tableLayout_admin.ColumnCount = 1;
             this.tableLayout_admin.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayout_admin.Controls.Add(this.admin_header_label, 0, 0);
             this.tableLayout_admin.Controls.Add(this.payoff_btn, 0, 3);
             this.tableLayout_admin.Controls.Add(this.slotMach_btn, 0, 2);
             this.tableLayout_admin.Controls.Add(this.tableLayout_admin_selFolder, 0, 1);
+            this.tableLayout_admin.Controls.Add(this.admin_settings_sub_panel, 0, 0);
             this.tableLayout_admin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayout_admin.Location = new System.Drawing.Point(0, 0);
             this.tableLayout_admin.Name = "tableLayout_admin";
@@ -142,17 +144,6 @@
             this.tableLayout_admin.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayout_admin.Size = new System.Drawing.Size(1028, 868);
             this.tableLayout_admin.TabIndex = 2;
-            // 
-            // admin_header_label
-            // 
-            this.admin_header_label.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.admin_header_label.AutoSize = true;
-            this.admin_header_label.Font = new System.Drawing.Font("Microsoft Tai Le", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.admin_header_label.Location = new System.Drawing.Point(390, 88);
-            this.admin_header_label.Name = "admin_header_label";
-            this.admin_header_label.Size = new System.Drawing.Size(248, 41);
-            this.admin_header_label.TabIndex = 3;
-            this.admin_header_label.Text = "Admin Settings";
             // 
             // payoff_btn
             // 
@@ -180,6 +171,7 @@
             // 
             // tableLayout_admin_selFolder
             // 
+            this.tableLayout_admin_selFolder.AutoScroll = true;
             this.tableLayout_admin_selFolder.ColumnCount = 1;
             this.tableLayout_admin_selFolder.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayout_admin_selFolder.Controls.Add(this.sel_folder_btn, 0, 0);
@@ -231,13 +223,46 @@
             this.folder_dir_example_label.TabIndex = 5;
             this.folder_dir_example_label.Text = "Example: C:\\Users\\MyName\\CasinoVR\\Assets\\scripts\\Json_files";
             // 
+            // admin_settings_sub_panel
+            // 
+            this.admin_settings_sub_panel.Controls.Add(this.back_toMain_btn);
+            this.admin_settings_sub_panel.Controls.Add(this.admin_header_label);
+            this.admin_settings_sub_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.admin_settings_sub_panel.Location = new System.Drawing.Point(3, 3);
+            this.admin_settings_sub_panel.Name = "admin_settings_sub_panel";
+            this.admin_settings_sub_panel.Size = new System.Drawing.Size(1022, 211);
+            this.admin_settings_sub_panel.TabIndex = 5;
+            // 
+            // back_toMain_btn
+            // 
+            this.back_toMain_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.back_toMain_btn.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.back_toMain_btn.Location = new System.Drawing.Point(8, 8);
+            this.back_toMain_btn.Name = "back_toMain_btn";
+            this.back_toMain_btn.Size = new System.Drawing.Size(224, 53);
+            this.back_toMain_btn.TabIndex = 7;
+            this.back_toMain_btn.Text = "Back to Casino Admin";
+            this.back_toMain_btn.UseVisualStyleBackColor = true;
+            this.back_toMain_btn.Click += new System.EventHandler(this.back_toMain_btn_Click);
+            // 
+            // admin_header_label
+            // 
+            this.admin_header_label.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.admin_header_label.AutoSize = true;
+            this.admin_header_label.Font = new System.Drawing.Font("Microsoft Tai Le", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.admin_header_label.Location = new System.Drawing.Point(375, 63);
+            this.admin_header_label.Name = "admin_header_label";
+            this.admin_header_label.Size = new System.Drawing.Size(248, 41);
+            this.admin_header_label.TabIndex = 6;
+            this.admin_header_label.Text = "Admin Settings";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1030, 870);
-            this.Controls.Add(this.panel_main);
             this.Controls.Add(this.panel_admin);
+            this.Controls.Add(this.panel_main);
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.Main_Form_Load);
@@ -246,9 +271,10 @@
             this.tableLayout_main.PerformLayout();
             this.panel_admin.ResumeLayout(false);
             this.tableLayout_admin.ResumeLayout(false);
-            this.tableLayout_admin.PerformLayout();
             this.tableLayout_admin_selFolder.ResumeLayout(false);
             this.tableLayout_admin_selFolder.PerformLayout();
+            this.admin_settings_sub_panel.ResumeLayout(false);
+            this.admin_settings_sub_panel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -262,13 +288,15 @@
         private System.Windows.Forms.Button button_HLTest_main;
         private System.Windows.Forms.Panel panel_admin;
         private System.Windows.Forms.TableLayoutPanel tableLayout_admin;
-        private System.Windows.Forms.Label admin_header_label;
         private System.Windows.Forms.Button payoff_btn;
         private System.Windows.Forms.Button slotMach_btn;
         private System.Windows.Forms.TableLayoutPanel tableLayout_admin_selFolder;
         private System.Windows.Forms.Button sel_folder_btn;
         private System.Windows.Forms.Label directory_label;
         private System.Windows.Forms.Label folder_dir_example_label;
+        private System.Windows.Forms.Panel admin_settings_sub_panel;
+        private System.Windows.Forms.Button back_toMain_btn;
+        private System.Windows.Forms.Label admin_header_label;
     }
 }
 

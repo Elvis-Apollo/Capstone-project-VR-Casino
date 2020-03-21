@@ -191,6 +191,7 @@ namespace CasinoAdmin
             slotObj = new SlotMachineObj() { ObjectName = slotMach.ToString(), OutcomeList = outcomeStringList, ReelSpinTime = getReelListOfSlotMachine(slotMach) }; //create object
             fileName = slotObj.ObjectName;
 
+            Console.WriteLine("PATH: " + jsonOutputPath);
             TextWriter txt = new StreamWriter(jsonOutputPath + "\\" + fileName + ".json"); // SlotMachine_x.json
             txt.Write(JsonSerializer.Serialize(slotObj));
             txt.Close();

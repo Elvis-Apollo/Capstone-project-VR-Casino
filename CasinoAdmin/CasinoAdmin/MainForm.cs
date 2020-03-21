@@ -46,8 +46,7 @@ namespace CasinoAdmin
             string currentPath = Directory.GetCurrentDirectory() + "\\path.txt";
             if (File.Exists(currentPath))
             {
-                string pathText = System.IO.File.ReadAllText(@"" + currentPath);
-                JsonFolderDirectory = pathText;
+                string pathText = System.IO.File.ReadAllText(@"" + currentPath).Replace("\n", String.Empty); // remove newline char
                 directory_label.Text = directoryLabelText + JsonFolderDirectory;
             }
         }
@@ -134,6 +133,15 @@ namespace CasinoAdmin
                 txtWrite.WriteLine(JsonFolderDirectory);
                 txtWrite.Close();
             }
+        }
+
+        //------------------------ Returns admin to main menu ------------------------
+        private void back_toMain_btn_Click(object sender, EventArgs e)
+        {
+            panel_admin.Visible = false;
+            panel_main.BringToFront();
+            panel_admin.SendToBack();
+            panel_main.Visible = true;
         }
     }
 }
