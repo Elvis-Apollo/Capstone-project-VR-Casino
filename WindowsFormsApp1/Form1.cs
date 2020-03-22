@@ -29,18 +29,7 @@ namespace WindowsFormsApp1
         // event args are sent with the event 
       
         
-        Label addlabel(int i , int start, int end)
-        {
-            Label l = new Label();
-            l.Name = "label";
-            l.Text = "label";
-            l.ForeColor = Color.Black;
-            l.Width = 170;
-            l.Location = new Point(100, 10);
-
-            return l;
-
-        }
+      
         TextBox tBox(int i , int start , int end)
         {
             TextBox t = new TextBox();
@@ -60,8 +49,8 @@ namespace WindowsFormsApp1
             r.Text = $"{i+1}/10 of ${max}  {i+9}/10 of ${min}";
             
             r.ForeColor = Color.Black;
-           //r.BackColor = Color.Green;
             r.Width = 300;
+            
             r.Location = new Point(start, end);
 
             return r;
@@ -74,7 +63,9 @@ namespace WindowsFormsApp1
             int start_b = 400;//start genertaing radio buttons for second option at this x co-ord
             int end = 20;// y co-ord to start generating radio buttons at 
             int increment = 30;// the amount we increase by  in the y direction to generate the next radio button
-           
+            int start_px = 0;
+            int start_py = 0;
+            int panel_increment = 20;
 
 
             //variables for textbox to change the payment amounts
@@ -86,14 +77,23 @@ namespace WindowsFormsApp1
             int start_y = 400;
             int increment_x = 100;
             //generate the radio buttons
+           
             for(int i = 0; i < 10; i++)
             {
-
+                Panel p = new Panel();
+                p.Width = 620;
+                p.Height = 40;
+                p.Location = new Point(0, start_py);
+               
                 RadioButton r = option(i,start_a, end, max_a, min_a);//option a radio buttons
                 RadioButton r2 = option(i, start_b, end, max_b, min_b);// option b radio buttons
-                this.Controls.Add(r);
-                this.Controls.Add(r2);
-                end = end + increment;
+                this.Controls.Add(p);
+
+                p.Controls.Add(r);
+                p.Controls.Add(r2);
+                
+                start_py += 40;
+
             }
             for(int i = 0; i < 4; i++)
             {
@@ -101,8 +101,11 @@ namespace WindowsFormsApp1
                 this.Controls.Add(t);
                 start_x = start_x + increment_x;
             }
+            
            
+          
         }
+        
     }
 
 
