@@ -64,6 +64,7 @@ namespace CasinoAdmin
         {
             // create holt laury form 
             HoltLauryForm hl_form = new HoltLauryForm();
+            hl_form.ShowDialog();
             hl_form.CreateHoltLauryForm();
             //this.Hide();
         }
