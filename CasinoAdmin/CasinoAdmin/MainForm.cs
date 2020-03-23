@@ -63,10 +63,8 @@ namespace CasinoAdmin
         private void button_HLTest_main_Click(object sender, EventArgs e)
         {
             // create holt laury form 
-            HoltLauryForm hl_form = new HoltLauryForm();
-            hl_form.ShowDialog();
-            hl_form.CreateHoltLauryForm();
-            //this.Hide();
+            HLTest_Form hlTest_form = new HLTest_Form();
+            hlTest_form.ShowDialog();
         }
 
         //------------------------ Main Admin btn ------------------------
