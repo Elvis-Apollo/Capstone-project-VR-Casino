@@ -66,18 +66,13 @@ namespace CasinoAdmin
             Console.WriteLine("OK button clicked");
 
             HoltLaury holt = new HoltLaury();
-          
-                using (StreamWriter file = File.CreateText($@"{JsonFolderDirectory}/HoltLaury.json"))
-                {
-               
-                }
-            
-            Console.WriteLine("maxA: " + Payoff_form.OptionA_Max);
-            Console.WriteLine("maxA: " + Payoff_form.OptionA_Min);
 
-            Console.WriteLine("maxB: " + Payoff_form.OptionB_Max);
-            Console.WriteLine("minB: " + Payoff_form.OptionB_Min);
+            // writes to json file
+            TextWriter txt = new StreamWriter(JsonFolderDirectory + "\\" + "HoltLaury_1.json"); // holtLaury_1.json
+            txt.Write(JsonSerializer.Serialize(holt));
+            txt.Close();
 
+            // TO DO!
             // Loop through all row panels, make sure one radio button from each row selected.
 
             // else throw error like this:
@@ -115,7 +110,6 @@ namespace CasinoAdmin
             OptionB_Min = Payoff_form.OptionB_Min;
         }
     }
-
 }
 
 
