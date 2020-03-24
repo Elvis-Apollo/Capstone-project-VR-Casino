@@ -7,6 +7,7 @@ using UnityEngine;
  * Date: March 2020 * 
  * This class is a Holt Laury object for a holtLaury.json data type
  */
+[System.Serializable]
 public class HoltLoaryObj
 {
     public float OptionA_Max { get; set; }

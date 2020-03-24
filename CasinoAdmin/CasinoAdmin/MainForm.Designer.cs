@@ -217,11 +217,12 @@
             this.folder_dir_example_label.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.folder_dir_example_label.AutoSize = true;
             this.folder_dir_example_label.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.folder_dir_example_label.Location = new System.Drawing.Point(323, 106);
+            this.folder_dir_example_label.Location = new System.Drawing.Point(232, 106);
             this.folder_dir_example_label.Name = "folder_dir_example_label";
-            this.folder_dir_example_label.Size = new System.Drawing.Size(375, 16);
+            this.folder_dir_example_label.Size = new System.Drawing.Size(558, 16);
             this.folder_dir_example_label.TabIndex = 5;
-            this.folder_dir_example_label.Text = "Example: C:\\Users\\MyName\\CasinoVR\\Assets\\scripts\\Json_files";
+            this.folder_dir_example_label.Text = "Example: C:\\Users\\UserName\\CasinoVR\\CasinoVR_Data\\StreamingAssets\\AdminSettings_J" +
+    "sons";
             // 
             // admin_settings_sub_panel
             // 
@@ -261,8 +262,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1030, 870);
-            this.Controls.Add(this.panel_main);
             this.Controls.Add(this.panel_admin);
+            this.Controls.Add(this.panel_main);
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.Main_Form_Load);
