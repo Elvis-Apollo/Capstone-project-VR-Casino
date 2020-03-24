@@ -1,14 +1,12 @@
 fileFormatVersion: 2
-guid: ef73fe373d145fa4b94cb18579cee348
+guid: 0796d6e06c1fd5243bed85332b6e3e8e
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: goldChrome
+    2100000: silverChrome
     2100002: blackPlastic
-    2100004: goldChrome.001
-    2100006: blackPlastic.002
     2300000: //RootNode
     3300000: //RootNode
     4300000: cabinet

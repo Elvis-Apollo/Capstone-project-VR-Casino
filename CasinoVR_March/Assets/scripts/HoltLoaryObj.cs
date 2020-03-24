@@ -7,6 +7,7 @@ using UnityEngine;
  * Date: March 2020 * 
  * This class is a Holt Laury object for a holtLaury.json data type
  */
+[System.Serializable]
 public class HoltLoaryObj
 {
     public float OptionA_Max { get; set; }
@@ -24,6 +25,7 @@ public class HoltLoaryObj
         return UnityEngine.Random.Range(0, Decision_Choices.Count);
     }
 
+    // gets a random payoff from the choice list
     public float getPayoff()
     {
         finalPayoff = 0f;
@@ -47,7 +49,7 @@ public class HoltLoaryObj
             tempMax = 0.0f;
             tempMin = 0.0f;
         }
-        Debug.Log("Chosen payoff of format 'A|B x' is " + random_payoff + " where, x/10 of " + tempMax + " and, (10-x)/10 of : " + tempMin);
+        Debug.Log("---------------PAYOFF: " + random_payoff + " where, x/10 of " + tempMax + " and, (10-x)/10 of : " + tempMin);
 
         char[] trimChars = { 'A', 'B', ' ' }; // remove A|B or whitespace prefix
         var rowNumber = random_payoff.TrimStart(trimChars); // get number only string        

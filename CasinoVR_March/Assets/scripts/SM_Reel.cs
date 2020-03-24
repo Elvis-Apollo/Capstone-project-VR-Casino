@@ -13,11 +13,11 @@ public class SM_Reel : MonoBehaviour
     [HideInInspector]
     public bool ReelSpinning;
 
-    
+
     // outcome angles[] indices represent the icons below:
-    //0 = crown, 1 = waterMelon, 2 = bar, 
-    //3= seven, 4 = cherry, 5 = lemon, 6 = diamond 
-    private List<float> outcome_Angles = new List<float> { 345, 295, 240, 190, 140, 85, 35 };
+    //0 = diamond, 1 = lemon, 2 = cherry, 
+    //3= seven, 4 = bar, 5 = watermelon, 6 = crown
+    private List<float> outcome_Angles = new List<float> { 12.0f, 57.0f, 113.0f, 165.0f, 215.0f, 268.0f, 317.0f };
 
     private OutcomeType current_outcome; // current outcome for this turn(W,L,NM)
     public float ReelsSpinSpeed;    // set reelspin in start()
@@ -25,7 +25,7 @@ public class SM_Reel : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        ReelsSpinSpeed = 4.0f;
+        ReelsSpinSpeed = 10.0f;
 
     }
 
@@ -106,7 +106,7 @@ public class SM_Reel : MonoBehaviour
                     break;
             }
             // set result rotation
-            transform.localRotation = Quaternion.Euler(outcome_Angles[sm_manager.ReelAResult], 1, 1);
+            transform.localRotation = Quaternion.Euler(outcome_Angles[sm_manager.ReelAResult], 0.0f, 0.0f);
             sm_manager.numOfReelsPlayed++; // this increments number of times a reel has spun
         }
         enabled = false;
