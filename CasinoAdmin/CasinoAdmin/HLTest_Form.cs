@@ -3,19 +3,25 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace CasinoAdmin
 {
+    
+
     public partial class HLTest_Form : Form
     {
+        public static string JsonFolderDirectory = MainForm.JsonFolderDirectory;
         public HLTest_Form()
         {
             InitializeComponent();
-
+            
             // hook up  ok and cancel button to form default Acept and Cancel buttons
             this.AcceptButton = OK_btn;
             this.CancelButton = Cancel_btn;
@@ -59,7 +65,13 @@ namespace CasinoAdmin
         {
             Console.WriteLine("OK button clicked");
 
-
+            HoltLaury holt = new HoltLaury();
+          
+                using (StreamWriter file = File.CreateText($@"{JsonFolderDirectory}/HoltLaury.json"))
+                {
+               
+                }
+            
             Console.WriteLine("maxA: " + Payoff_form.OptionA_Max);
             Console.WriteLine("maxA: " + Payoff_form.OptionA_Min);
 
@@ -84,5 +96,26 @@ namespace CasinoAdmin
 
         }
     }
+    public class HoltLaury
+    {
+
+        public decimal OptionA_Max { get; set; }
+        public decimal OptionA_Min { get; set; }
+        public decimal OptionB_Max { get; set; }
+        public decimal OptionB_Min { get; set; }
+
+        public String[] Decision_Choices { get; set; }
+
+        public HoltLaury()
+        {
+            Decision_Choices = new string[10] { "A1", "A2", "A3", "A4", "B5", "B6", "B7", "B8", "B9", "B10" };
+            OptionA_Max = Payoff_form.OptionA_Max;
+            OptionA_Min = Payoff_form.OptionA_Min;
+            OptionB_Max = Payoff_form.OptionB_Max;
+            OptionB_Min = Payoff_form.OptionB_Min;
+        }
+    }
 
 }
+
+
