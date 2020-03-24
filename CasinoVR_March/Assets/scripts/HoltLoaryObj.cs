@@ -25,6 +25,7 @@ public class HoltLoaryObj
         return UnityEngine.Random.Range(0, Decision_Choices.Count);
     }
 
+    // gets a random payoff from the choice list
     public float getPayoff()
     {
         finalPayoff = 0f;
