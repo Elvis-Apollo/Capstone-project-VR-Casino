@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Text.Json;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
@@ -64,31 +57,18 @@ namespace CasinoAdmin
         private void OK_btn_Click(object sender, EventArgs e)
         {
             Console.WriteLine("OK button clicked");
-
-            HoltLaury holt = new HoltLaury();
+            
+            HoltLaury holt = new HoltLaury(); //create object
 
             // writes to json file
             TextWriter txt = new StreamWriter(JsonFolderDirectory + "\\" + "HoltLaury_1.json"); // holtLaury_1.json
             txt.Write(JsonSerializer.Serialize(holt));
             txt.Close();
-
-            // TO DO!
-            // Loop through all row panels, make sure one radio button from each row selected.
-
-            // else throw error like this:
-            //MessageBox.Show("Error, select an option from each row!", "Error");
-
-            // if all rows selected, save to disk(we want to save to same folder as the other jsons(slot machines)
         }
 
         private void Cancel_btn_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Cancel button clicked");
-        }
-
-        private void A1_radioBtn_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
     }
     public class HoltLaury
@@ -103,7 +83,14 @@ namespace CasinoAdmin
 
         public HoltLaury()
         {
-            Decision_Choices = new string[10] { "A1", "A2", "A3", "A4", "B5", "B6", "B7", "B8", "B9", "B10" };
+            // FIX TODO!!!
+
+            // Loop through all row panels, make sure one radio button from each row selected.
+            // else throw error like this:
+            //MessageBox.Show("Error, select an option from each row!", "Error");
+
+            // if all rows selected, save to disk(we want to save to same folder as the other jsons(slot machines)
+            Decision_Choices = new string[10] { "A1", "A2", "A3", "A4", "B5", "B6", "B7", "B8", "B9", "B10" }; // This needs to come from Dynamic User choices
             OptionA_Max = Payoff_form.OptionA_Max;
             OptionA_Min = Payoff_form.OptionA_Min;
             OptionB_Max = Payoff_form.OptionB_Max;
