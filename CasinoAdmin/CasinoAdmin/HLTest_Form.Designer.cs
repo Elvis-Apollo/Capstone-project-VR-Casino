@@ -84,9 +84,10 @@
             this.B2_radioBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.B2_radioBtn.AutoSize = true;
             this.B2_radioBtn.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.B2_radioBtn.Location = new System.Drawing.Point(677, 16);
+            this.B2_radioBtn.Location = new System.Drawing.Point(904, 18);
+            this.B2_radioBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.B2_radioBtn.Name = "B2_radioBtn";
-            this.B2_radioBtn.Size = new System.Drawing.Size(46, 25);
+            this.B2_radioBtn.Size = new System.Drawing.Size(55, 29);
             this.B2_radioBtn.TabIndex = 4;
             this.B2_radioBtn.TabStop = true;
             this.B2_radioBtn.Text = "B2";
@@ -97,9 +98,10 @@
             this.B4_radioBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.B4_radioBtn.AutoSize = true;
             this.B4_radioBtn.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.B4_radioBtn.Location = new System.Drawing.Point(677, 16);
+            this.B4_radioBtn.Location = new System.Drawing.Point(904, 18);
+            this.B4_radioBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.B4_radioBtn.Name = "B4_radioBtn";
-            this.B4_radioBtn.Size = new System.Drawing.Size(46, 25);
+            this.B4_radioBtn.Size = new System.Drawing.Size(55, 29);
             this.B4_radioBtn.TabIndex = 4;
             this.B4_radioBtn.TabStop = true;
             this.B4_radioBtn.Text = "B4";
@@ -110,9 +112,10 @@
             this.A4_radioBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.A4_radioBtn.AutoSize = true;
             this.A4_radioBtn.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A4_radioBtn.Location = new System.Drawing.Point(219, 16);
+            this.A4_radioBtn.Location = new System.Drawing.Point(293, 18);
+            this.A4_radioBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.A4_radioBtn.Name = "A4_radioBtn";
-            this.A4_radioBtn.Size = new System.Drawing.Size(47, 25);
+            this.A4_radioBtn.Size = new System.Drawing.Size(57, 29);
             this.A4_radioBtn.TabIndex = 3;
             this.A4_radioBtn.TabStop = true;
             this.A4_radioBtn.Text = "A4";
@@ -125,9 +128,10 @@
             this.row3_panel.Controls.Add(this.B3_radioBtn);
             this.row3_panel.Controls.Add(this.A3_radioBtn);
             this.row3_panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.row3_panel.Location = new System.Drawing.Point(3, 271);
+            this.row3_panel.Location = new System.Drawing.Point(4, 316);
+            this.row3_panel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.row3_panel.Name = "row3_panel";
-            this.row3_panel.Size = new System.Drawing.Size(1020, 61);
+            this.row3_panel.Size = new System.Drawing.Size(1360, 70);
             this.row3_panel.TabIndex = 30;
             // 
             // B3_radioBtn
@@ -135,9 +139,10 @@
             this.B3_radioBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.B3_radioBtn.AutoSize = true;
             this.B3_radioBtn.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.B3_radioBtn.Location = new System.Drawing.Point(677, 16);
+            this.B3_radioBtn.Location = new System.Drawing.Point(904, 18);
+            this.B3_radioBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.B3_radioBtn.Name = "B3_radioBtn";
-            this.B3_radioBtn.Size = new System.Drawing.Size(46, 25);
+            this.B3_radioBtn.Size = new System.Drawing.Size(55, 29);
             this.B3_radioBtn.TabIndex = 4;
             this.B3_radioBtn.TabStop = true;
             this.B3_radioBtn.Text = "B3";
@@ -148,9 +153,10 @@
             this.A3_radioBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.A3_radioBtn.AutoSize = true;
             this.A3_radioBtn.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A3_radioBtn.Location = new System.Drawing.Point(219, 16);
+            this.A3_radioBtn.Location = new System.Drawing.Point(293, 18);
+            this.A3_radioBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.A3_radioBtn.Name = "A3_radioBtn";
-            this.A3_radioBtn.Size = new System.Drawing.Size(47, 25);
+            this.A3_radioBtn.Size = new System.Drawing.Size(57, 29);
             this.A3_radioBtn.TabIndex = 3;
             this.A3_radioBtn.TabStop = true;
             this.A3_radioBtn.Text = "A3";
@@ -163,9 +169,10 @@
             this.row4_panel.Controls.Add(this.B4_radioBtn);
             this.row4_panel.Controls.Add(this.A4_radioBtn);
             this.row4_panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.row4_panel.Location = new System.Drawing.Point(3, 338);
+            this.row4_panel.Location = new System.Drawing.Point(4, 394);
+            this.row4_panel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.row4_panel.Name = "row4_panel";
-            this.row4_panel.Size = new System.Drawing.Size(1020, 61);
+            this.row4_panel.Size = new System.Drawing.Size(1360, 70);
             this.row4_panel.TabIndex = 31;
             // 
             // row2_panel
@@ -175,9 +182,10 @@
             this.row2_panel.Controls.Add(this.B1_radioBtn);
             this.row2_panel.Controls.Add(this.A1_radioBtn);
             this.row2_panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.row2_panel.Location = new System.Drawing.Point(3, 137);
+            this.row2_panel.Location = new System.Drawing.Point(4, 160);
+            this.row2_panel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.row2_panel.Name = "row2_panel";
-            this.row2_panel.Size = new System.Drawing.Size(1020, 61);
+            this.row2_panel.Size = new System.Drawing.Size(1360, 70);
             this.row2_panel.TabIndex = 29;
             // 
             // B1_radioBtn
@@ -185,9 +193,10 @@
             this.B1_radioBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.B1_radioBtn.AutoSize = true;
             this.B1_radioBtn.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.B1_radioBtn.Location = new System.Drawing.Point(677, 16);
+            this.B1_radioBtn.Location = new System.Drawing.Point(904, 18);
+            this.B1_radioBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.B1_radioBtn.Name = "B1_radioBtn";
-            this.B1_radioBtn.Size = new System.Drawing.Size(46, 25);
+            this.B1_radioBtn.Size = new System.Drawing.Size(55, 29);
             this.B1_radioBtn.TabIndex = 4;
             this.B1_radioBtn.TabStop = true;
             this.B1_radioBtn.Text = "B1";
@@ -198,22 +207,25 @@
             this.A1_radioBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.A1_radioBtn.AutoSize = true;
             this.A1_radioBtn.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A1_radioBtn.Location = new System.Drawing.Point(219, 16);
+            this.A1_radioBtn.Location = new System.Drawing.Point(293, 18);
+            this.A1_radioBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.A1_radioBtn.Name = "A1_radioBtn";
-            this.A1_radioBtn.Size = new System.Drawing.Size(47, 25);
+            this.A1_radioBtn.Size = new System.Drawing.Size(57, 29);
             this.A1_radioBtn.TabIndex = 3;
             this.A1_radioBtn.TabStop = true;
             this.A1_radioBtn.Text = "A1";
             this.A1_radioBtn.UseVisualStyleBackColor = true;
+            this.A1_radioBtn.CheckedChanged += new System.EventHandler(this.A1_radioBtn_CheckedChanged);
             // 
             // Cancel_btn
             // 
             this.Cancel_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Cancel_btn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Cancel_btn.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cancel_btn.Location = new System.Drawing.Point(661, 825);
+            this.Cancel_btn.Location = new System.Drawing.Point(881, 964);
+            this.Cancel_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Cancel_btn.Name = "Cancel_btn";
-            this.Cancel_btn.Size = new System.Drawing.Size(217, 50);
+            this.Cancel_btn.Size = new System.Drawing.Size(289, 62);
             this.Cancel_btn.TabIndex = 27;
             this.Cancel_btn.Text = "Cancel";
             this.Cancel_btn.UseVisualStyleBackColor = true;
@@ -224,9 +236,10 @@
             this.OptionA_label.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.OptionA_label.AutoSize = true;
             this.OptionA_label.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OptionA_label.Location = new System.Drawing.Point(211, 89);
+            this.OptionA_label.Location = new System.Drawing.Point(283, 101);
+            this.OptionA_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.OptionA_label.Name = "OptionA_label";
-            this.OptionA_label.Size = new System.Drawing.Size(90, 23);
+            this.OptionA_label.Size = new System.Drawing.Size(117, 31);
             this.OptionA_label.TabIndex = 0;
             this.OptionA_label.Text = "Option A";
             // 
@@ -235,9 +248,10 @@
             this.OptionB_label.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.OptionB_label.AutoSize = true;
             this.OptionB_label.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OptionB_label.Location = new System.Drawing.Point(725, 89);
+            this.OptionB_label.Location = new System.Drawing.Point(968, 101);
+            this.OptionB_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.OptionB_label.Name = "OptionB_label";
-            this.OptionB_label.Size = new System.Drawing.Size(89, 23);
+            this.OptionB_label.Size = new System.Drawing.Size(115, 31);
             this.OptionB_label.TabIndex = 1;
             this.OptionB_label.Text = "Option B";
             // 
@@ -247,9 +261,10 @@
             this.HL_title_label.AutoSize = true;
             this.HL_table.SetColumnSpan(this.HL_title_label, 2);
             this.HL_title_label.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HL_title_label.Location = new System.Drawing.Point(332, 22);
+            this.HL_title_label.Location = new System.Drawing.Point(448, 23);
+            this.HL_title_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.HL_title_label.Name = "HL_title_label";
-            this.HL_title_label.Size = new System.Drawing.Size(362, 23);
+            this.HL_title_label.Size = new System.Drawing.Size(471, 31);
             this.HL_title_label.TabIndex = 25;
             this.HL_title_label.Text = "Please select one option from each row:";
             // 
@@ -257,9 +272,10 @@
             // 
             this.OK_btn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.OK_btn.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OK_btn.Location = new System.Drawing.Point(148, 823);
+            this.OK_btn.Location = new System.Drawing.Point(197, 963);
+            this.OK_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.OK_btn.Name = "OK_btn";
-            this.OK_btn.Size = new System.Drawing.Size(217, 53);
+            this.OK_btn.Size = new System.Drawing.Size(289, 65);
             this.OK_btn.TabIndex = 26;
             this.OK_btn.Text = "OK";
             this.OK_btn.UseVisualStyleBackColor = true;
@@ -272,9 +288,10 @@
             this.row1_panel.Controls.Add(this.B2_radioBtn);
             this.row1_panel.Controls.Add(this.A2_radioBtn);
             this.row1_panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.row1_panel.Location = new System.Drawing.Point(3, 204);
+            this.row1_panel.Location = new System.Drawing.Point(4, 238);
+            this.row1_panel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.row1_panel.Name = "row1_panel";
-            this.row1_panel.Size = new System.Drawing.Size(1020, 61);
+            this.row1_panel.Size = new System.Drawing.Size(1360, 70);
             this.row1_panel.TabIndex = 28;
             // 
             // A2_radioBtn
@@ -282,9 +299,10 @@
             this.A2_radioBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.A2_radioBtn.AutoSize = true;
             this.A2_radioBtn.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A2_radioBtn.Location = new System.Drawing.Point(219, 16);
+            this.A2_radioBtn.Location = new System.Drawing.Point(293, 18);
+            this.A2_radioBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.A2_radioBtn.Name = "A2_radioBtn";
-            this.A2_radioBtn.Size = new System.Drawing.Size(47, 25);
+            this.A2_radioBtn.Size = new System.Drawing.Size(57, 29);
             this.A2_radioBtn.TabIndex = 3;
             this.A2_radioBtn.TabStop = true;
             this.A2_radioBtn.Text = "A2";
@@ -295,9 +313,10 @@
             this.B5_radioBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.B5_radioBtn.AutoSize = true;
             this.B5_radioBtn.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.B5_radioBtn.Location = new System.Drawing.Point(677, 16);
+            this.B5_radioBtn.Location = new System.Drawing.Point(904, 18);
+            this.B5_radioBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.B5_radioBtn.Name = "B5_radioBtn";
-            this.B5_radioBtn.Size = new System.Drawing.Size(46, 25);
+            this.B5_radioBtn.Size = new System.Drawing.Size(55, 29);
             this.B5_radioBtn.TabIndex = 4;
             this.B5_radioBtn.TabStop = true;
             this.B5_radioBtn.Text = "B5";
@@ -308,8 +327,9 @@
             this.HL_panel.Controls.Add(this.HL_table);
             this.HL_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.HL_panel.Location = new System.Drawing.Point(0, 0);
+            this.HL_panel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.HL_panel.Name = "HL_panel";
-            this.HL_panel.Size = new System.Drawing.Size(1026, 896);
+            this.HL_panel.Size = new System.Drawing.Size(1368, 1055);
             this.HL_panel.TabIndex = 1;
             // 
             // HL_table
@@ -334,6 +354,7 @@
             this.HL_table.Controls.Add(this.row1_panel, 0, 3);
             this.HL_table.Dock = System.Windows.Forms.DockStyle.Fill;
             this.HL_table.Location = new System.Drawing.Point(0, 0);
+            this.HL_table.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.HL_table.Name = "HL_table";
             this.HL_table.RowCount = 13;
             this.HL_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
@@ -348,8 +369,8 @@
             this.HL_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
             this.HL_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
             this.HL_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.HL_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 87F));
-            this.HL_table.Size = new System.Drawing.Size(1026, 896);
+            this.HL_table.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 107F));
+            this.HL_table.Size = new System.Drawing.Size(1368, 1055);
             this.HL_table.TabIndex = 1;
             // 
             // row10_panel
@@ -359,9 +380,10 @@
             this.row10_panel.Controls.Add(this.B10_radioBtn);
             this.row10_panel.Controls.Add(this.A10_radioBtn);
             this.row10_panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.row10_panel.Location = new System.Drawing.Point(3, 740);
+            this.row10_panel.Location = new System.Drawing.Point(4, 862);
+            this.row10_panel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.row10_panel.Name = "row10_panel";
-            this.row10_panel.Size = new System.Drawing.Size(1020, 61);
+            this.row10_panel.Size = new System.Drawing.Size(1360, 70);
             this.row10_panel.TabIndex = 37;
             // 
             // B10_radioBtn
@@ -369,9 +391,10 @@
             this.B10_radioBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.B10_radioBtn.AutoSize = true;
             this.B10_radioBtn.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.B10_radioBtn.Location = new System.Drawing.Point(677, 16);
+            this.B10_radioBtn.Location = new System.Drawing.Point(904, 18);
+            this.B10_radioBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.B10_radioBtn.Name = "B10_radioBtn";
-            this.B10_radioBtn.Size = new System.Drawing.Size(55, 25);
+            this.B10_radioBtn.Size = new System.Drawing.Size(66, 29);
             this.B10_radioBtn.TabIndex = 4;
             this.B10_radioBtn.TabStop = true;
             this.B10_radioBtn.Text = "B10";
@@ -382,9 +405,10 @@
             this.A10_radioBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.A10_radioBtn.AutoSize = true;
             this.A10_radioBtn.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A10_radioBtn.Location = new System.Drawing.Point(219, 16);
+            this.A10_radioBtn.Location = new System.Drawing.Point(293, 18);
+            this.A10_radioBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.A10_radioBtn.Name = "A10_radioBtn";
-            this.A10_radioBtn.Size = new System.Drawing.Size(56, 25);
+            this.A10_radioBtn.Size = new System.Drawing.Size(68, 29);
             this.A10_radioBtn.TabIndex = 3;
             this.A10_radioBtn.TabStop = true;
             this.A10_radioBtn.Text = "A10";
@@ -397,9 +421,10 @@
             this.row9_panel.Controls.Add(this.B9_radioBtn);
             this.row9_panel.Controls.Add(this.A9_radioBtn);
             this.row9_panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.row9_panel.Location = new System.Drawing.Point(3, 673);
+            this.row9_panel.Location = new System.Drawing.Point(4, 784);
+            this.row9_panel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.row9_panel.Name = "row9_panel";
-            this.row9_panel.Size = new System.Drawing.Size(1020, 61);
+            this.row9_panel.Size = new System.Drawing.Size(1360, 70);
             this.row9_panel.TabIndex = 36;
             // 
             // B9_radioBtn
@@ -407,9 +432,10 @@
             this.B9_radioBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.B9_radioBtn.AutoSize = true;
             this.B9_radioBtn.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.B9_radioBtn.Location = new System.Drawing.Point(677, 16);
+            this.B9_radioBtn.Location = new System.Drawing.Point(904, 18);
+            this.B9_radioBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.B9_radioBtn.Name = "B9_radioBtn";
-            this.B9_radioBtn.Size = new System.Drawing.Size(46, 25);
+            this.B9_radioBtn.Size = new System.Drawing.Size(55, 29);
             this.B9_radioBtn.TabIndex = 4;
             this.B9_radioBtn.TabStop = true;
             this.B9_radioBtn.Text = "B9";
@@ -420,9 +446,10 @@
             this.A9_radioBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.A9_radioBtn.AutoSize = true;
             this.A9_radioBtn.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A9_radioBtn.Location = new System.Drawing.Point(219, 16);
+            this.A9_radioBtn.Location = new System.Drawing.Point(293, 18);
+            this.A9_radioBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.A9_radioBtn.Name = "A9_radioBtn";
-            this.A9_radioBtn.Size = new System.Drawing.Size(47, 25);
+            this.A9_radioBtn.Size = new System.Drawing.Size(57, 29);
             this.A9_radioBtn.TabIndex = 3;
             this.A9_radioBtn.TabStop = true;
             this.A9_radioBtn.Text = "A9";
@@ -435,9 +462,10 @@
             this.row8_panel.Controls.Add(this.B8_radioBtn);
             this.row8_panel.Controls.Add(this.A8_radioBtn);
             this.row8_panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.row8_panel.Location = new System.Drawing.Point(3, 606);
+            this.row8_panel.Location = new System.Drawing.Point(4, 706);
+            this.row8_panel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.row8_panel.Name = "row8_panel";
-            this.row8_panel.Size = new System.Drawing.Size(1020, 61);
+            this.row8_panel.Size = new System.Drawing.Size(1360, 70);
             this.row8_panel.TabIndex = 35;
             // 
             // B8_radioBtn
@@ -445,9 +473,10 @@
             this.B8_radioBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.B8_radioBtn.AutoSize = true;
             this.B8_radioBtn.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.B8_radioBtn.Location = new System.Drawing.Point(677, 16);
+            this.B8_radioBtn.Location = new System.Drawing.Point(904, 18);
+            this.B8_radioBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.B8_radioBtn.Name = "B8_radioBtn";
-            this.B8_radioBtn.Size = new System.Drawing.Size(46, 25);
+            this.B8_radioBtn.Size = new System.Drawing.Size(55, 29);
             this.B8_radioBtn.TabIndex = 4;
             this.B8_radioBtn.TabStop = true;
             this.B8_radioBtn.Text = "B8";
@@ -458,9 +487,10 @@
             this.A8_radioBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.A8_radioBtn.AutoSize = true;
             this.A8_radioBtn.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A8_radioBtn.Location = new System.Drawing.Point(219, 16);
+            this.A8_radioBtn.Location = new System.Drawing.Point(293, 18);
+            this.A8_radioBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.A8_radioBtn.Name = "A8_radioBtn";
-            this.A8_radioBtn.Size = new System.Drawing.Size(47, 25);
+            this.A8_radioBtn.Size = new System.Drawing.Size(57, 29);
             this.A8_radioBtn.TabIndex = 3;
             this.A8_radioBtn.TabStop = true;
             this.A8_radioBtn.Text = "A8";
@@ -473,9 +503,10 @@
             this.row7_panel.Controls.Add(this.B7_radioBtn);
             this.row7_panel.Controls.Add(this.A7_radioBtn);
             this.row7_panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.row7_panel.Location = new System.Drawing.Point(3, 539);
+            this.row7_panel.Location = new System.Drawing.Point(4, 628);
+            this.row7_panel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.row7_panel.Name = "row7_panel";
-            this.row7_panel.Size = new System.Drawing.Size(1020, 61);
+            this.row7_panel.Size = new System.Drawing.Size(1360, 70);
             this.row7_panel.TabIndex = 34;
             // 
             // B7_radioBtn
@@ -483,9 +514,10 @@
             this.B7_radioBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.B7_radioBtn.AutoSize = true;
             this.B7_radioBtn.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.B7_radioBtn.Location = new System.Drawing.Point(677, 16);
+            this.B7_radioBtn.Location = new System.Drawing.Point(904, 18);
+            this.B7_radioBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.B7_radioBtn.Name = "B7_radioBtn";
-            this.B7_radioBtn.Size = new System.Drawing.Size(46, 25);
+            this.B7_radioBtn.Size = new System.Drawing.Size(55, 29);
             this.B7_radioBtn.TabIndex = 4;
             this.B7_radioBtn.TabStop = true;
             this.B7_radioBtn.Text = "B7";
@@ -496,9 +528,10 @@
             this.A7_radioBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.A7_radioBtn.AutoSize = true;
             this.A7_radioBtn.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A7_radioBtn.Location = new System.Drawing.Point(219, 16);
+            this.A7_radioBtn.Location = new System.Drawing.Point(293, 18);
+            this.A7_radioBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.A7_radioBtn.Name = "A7_radioBtn";
-            this.A7_radioBtn.Size = new System.Drawing.Size(47, 25);
+            this.A7_radioBtn.Size = new System.Drawing.Size(57, 29);
             this.A7_radioBtn.TabIndex = 3;
             this.A7_radioBtn.TabStop = true;
             this.A7_radioBtn.Text = "A7";
@@ -511,9 +544,10 @@
             this.row6_panel.Controls.Add(this.B6_radioBtn);
             this.row6_panel.Controls.Add(this.A6_radioBtn);
             this.row6_panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.row6_panel.Location = new System.Drawing.Point(3, 472);
+            this.row6_panel.Location = new System.Drawing.Point(4, 550);
+            this.row6_panel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.row6_panel.Name = "row6_panel";
-            this.row6_panel.Size = new System.Drawing.Size(1020, 61);
+            this.row6_panel.Size = new System.Drawing.Size(1360, 70);
             this.row6_panel.TabIndex = 33;
             // 
             // B6_radioBtn
@@ -521,9 +555,10 @@
             this.B6_radioBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.B6_radioBtn.AutoSize = true;
             this.B6_radioBtn.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.B6_radioBtn.Location = new System.Drawing.Point(677, 16);
+            this.B6_radioBtn.Location = new System.Drawing.Point(904, 18);
+            this.B6_radioBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.B6_radioBtn.Name = "B6_radioBtn";
-            this.B6_radioBtn.Size = new System.Drawing.Size(46, 25);
+            this.B6_radioBtn.Size = new System.Drawing.Size(55, 29);
             this.B6_radioBtn.TabIndex = 4;
             this.B6_radioBtn.TabStop = true;
             this.B6_radioBtn.Text = "B6";
@@ -534,9 +569,10 @@
             this.A6_radioBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.A6_radioBtn.AutoSize = true;
             this.A6_radioBtn.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A6_radioBtn.Location = new System.Drawing.Point(219, 16);
+            this.A6_radioBtn.Location = new System.Drawing.Point(293, 18);
+            this.A6_radioBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.A6_radioBtn.Name = "A6_radioBtn";
-            this.A6_radioBtn.Size = new System.Drawing.Size(47, 25);
+            this.A6_radioBtn.Size = new System.Drawing.Size(57, 29);
             this.A6_radioBtn.TabIndex = 3;
             this.A6_radioBtn.TabStop = true;
             this.A6_radioBtn.Text = "A6";
@@ -549,9 +585,10 @@
             this.row5_panel.Controls.Add(this.B5_radioBtn);
             this.row5_panel.Controls.Add(this.A5_radioBtn);
             this.row5_panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.row5_panel.Location = new System.Drawing.Point(3, 405);
+            this.row5_panel.Location = new System.Drawing.Point(4, 472);
+            this.row5_panel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.row5_panel.Name = "row5_panel";
-            this.row5_panel.Size = new System.Drawing.Size(1020, 61);
+            this.row5_panel.Size = new System.Drawing.Size(1360, 70);
             this.row5_panel.TabIndex = 32;
             // 
             // A5_radioBtn
@@ -559,9 +596,10 @@
             this.A5_radioBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.A5_radioBtn.AutoSize = true;
             this.A5_radioBtn.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A5_radioBtn.Location = new System.Drawing.Point(219, 16);
+            this.A5_radioBtn.Location = new System.Drawing.Point(293, 18);
+            this.A5_radioBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.A5_radioBtn.Name = "A5_radioBtn";
-            this.A5_radioBtn.Size = new System.Drawing.Size(47, 25);
+            this.A5_radioBtn.Size = new System.Drawing.Size(57, 29);
             this.A5_radioBtn.TabIndex = 3;
             this.A5_radioBtn.TabStop = true;
             this.A5_radioBtn.Text = "A5";
@@ -569,10 +607,11 @@
             // 
             // HLTest_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1026, 896);
+            this.ClientSize = new System.Drawing.Size(1368, 1055);
             this.Controls.Add(this.HL_panel);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "HLTest_Form";
             this.Text = "HLTest_Form";
             this.row3_panel.ResumeLayout(false);

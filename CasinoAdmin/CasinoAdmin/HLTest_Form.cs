@@ -19,8 +19,38 @@ namespace CasinoAdmin
             // hook up  ok and cancel button to form default Acept and Cancel buttons
             this.AcceptButton = OK_btn;
             this.CancelButton = Cancel_btn;
-
+            initalTextA(Payoff_form.OptionA_Max,Payoff_form.OptionA_Min);
+            initalTextB(Payoff_form.OptionB_Max,Payoff_form.OptionB_Min);
             //this.ResumeLayout(false);
+        }
+
+        public void initalTextA(decimal max_a,decimal min_a)
+        {
+            
+            A1_radioBtn.Text = $"1/10 Chance Of ${max_a}, 9/10 Chance of ${min_a}";
+            A2_radioBtn.Text = $"2/10 Chance Of ${max_a}, 8/10 Chance of ${min_a}";
+            A3_radioBtn.Text = $"3/10 Chance Of ${max_a}, 7/10 Chance of ${min_a}";
+            A4_radioBtn.Text = $"4/10 Chance Of ${max_a}, 6/10 Chance of ${min_a}";
+            A5_radioBtn.Text = $"5/10 Chance Of ${max_a}, 5/10 Chance of ${min_a}";
+            A6_radioBtn.Text = $"6/10 Chance Of ${max_a}, 4/10 Chance of ${min_a}";
+            A7_radioBtn.Text = $"7/10 Chance Of ${max_a}, 3/10 Chance of ${min_a}";
+            A8_radioBtn.Text = $"8/10 Chance Of ${max_a}, 2/10 Chance of ${min_a}";
+            A9_radioBtn.Text = $"9/10 Chance Of ${max_a}, 1/10 Chance of ${min_a}";
+            A10_radioBtn.Text = $"10/10 Chance Of ${max_a}, 0/10 Chance of ${min_a}";
+        }
+
+        public void initalTextB(decimal max_b,decimal min_b)
+        {
+            B1_radioBtn.Text = $"1/10 Chance Of ${max_b}, 9/10 Chance of ${min_b}";
+            B2_radioBtn.Text = $"2/10 Chance Of ${max_b}, 8/10 Chance of ${min_b}";
+            B3_radioBtn.Text = $"3/10 Chance Of ${max_b}, 7/10 Chance of ${min_b}";
+            B4_radioBtn.Text = $"4/10 Chance Of ${max_b}, 6/10 Chance of ${min_b}";
+            B5_radioBtn.Text = $"5/10 Chance Of ${max_b}, 5/10 Chance of ${min_b}";
+            B6_radioBtn.Text = $"6/10 Chance Of ${max_b}, 4/10 Chance of ${min_b}";
+            B7_radioBtn.Text = $"7/10 Chance Of ${max_b}, 3/10 Chance of ${min_b}";
+            B8_radioBtn.Text = $"8/10 Chance Of ${max_b}, 2/10 Chance of ${min_b}";
+            B9_radioBtn.Text = $"9/10 Chance Of ${max_b}, 1/10 Chance of ${min_b}";
+            B10_radioBtn.Text = $"10/10 Chance Of ${max_b}, 0/10 Chance of ${min_b}";
         }
 
 
@@ -47,6 +77,11 @@ namespace CasinoAdmin
         private void Cancel_btn_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Cancel button clicked");
+        }
+
+        private void A1_radioBtn_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 
