@@ -80,6 +80,12 @@
     <Compile Include="HLTest_Form.Designer.cs">
       <DependentUpon>HLTest_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Payoff_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payoff_form.Designer.cs">
+      <DependentUpon>Payoff_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="SlotMachineForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payoff_form.resx">
+      <DependentUpon>Payoff_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SlotMachineForm.resx">
       <DependentUpon>SlotMachineForm.cs</DependentUpon>

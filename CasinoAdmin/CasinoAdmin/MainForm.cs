@@ -28,7 +28,7 @@ namespace CasinoAdmin
         {
             InitializeComponent();
             panel_main.BringToFront();
-            panel_admin.Visible = false ;
+            panel_admin.Visible = false;
             panel_admin.SendToBack();
         } // constructor ends here
 
@@ -62,9 +62,17 @@ namespace CasinoAdmin
         //------------------------ Main HoltLaury test btn ------------------------
         private void button_HLTest_main_Click(object sender, EventArgs e)
         {
-            // create holt laury form 
-            HLTest_Form hlTest_form = new HLTest_Form();
-            hlTest_form.ShowDialog();
+            if (JsonFolderDirectory == "") // if folder has not been set yet
+            {
+                MessageBox.Show("Please contact Admin to initalize test.", "Contact Admin!");
+
+            }
+            else
+            {
+                // create holt laury test form 
+                HLTest_Form hlTest_form = new HLTest_Form();
+                hlTest_form.ShowDialog();
+            }
         }
 
         //------------------------ Main Admin btn ------------------------
@@ -91,7 +99,9 @@ namespace CasinoAdmin
             }
             else
             {
-                Console.WriteLine("Payoff button clicked");
+                // create payoff form 
+                Payoff_form payoff_form = new Payoff_form();
+                payoff_form.ShowDialog();
             }
         }
 
@@ -121,8 +131,8 @@ namespace CasinoAdmin
             if (dialogResult == DialogResult.OK) // if able to select a  folder
             {
                 // The user selected a folder and pressed the OK button.
-                
-                string[] files = Directory.GetFiles(folderBrowsePopup.SelectedPath);             
+
+                string[] files = Directory.GetFiles(folderBrowsePopup.SelectedPath);
                 MessageBox.Show("Files found: " + files.Length.ToString(), "Message");
 
                 JsonFolderDirectory = folderBrowsePopup.SelectedPath; // set global directory string

@@ -29,6 +29,13 @@ namespace CasinoAdmin
         {
             Console.WriteLine("OK button clicked");
 
+
+            Console.WriteLine("maxA: " + Payoff_form.OptionA_Max);
+            Console.WriteLine("maxA: " + Payoff_form.OptionA_Min);
+
+            Console.WriteLine("maxB: " + Payoff_form.OptionB_Max);
+            Console.WriteLine("minB: " + Payoff_form.OptionB_Min);
+
             // Loop through all row panels, make sure one radio button from each row selected.
 
             // else throw error like this:
