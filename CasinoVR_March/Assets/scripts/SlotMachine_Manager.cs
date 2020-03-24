@@ -66,9 +66,9 @@ public class SlotMachine_Manager : MonoBehaviour
 
         string holt_json_path = adminSettings_json_folder_path + "HoltLaury_1.json"; // for HoltLaury1.json
         holtLoaryObj = JsonConvert.DeserializeObject<HoltLoaryObj>(File.ReadAllText(holt_json_path));
-
-        Debug.Log(this.name + " Current Win Payoff Amount: " + holtLoaryObj.getPayoff());
+               
         currentPayoff = holtLoaryObj.getPayoff();
+        Debug.Log(this.name + " Current Win Payoff: " + currentPayoff);
 
 
         Tries_Left_Count = admin_SM.OutcomeList.Count;
@@ -91,7 +91,6 @@ public class SlotMachine_Manager : MonoBehaviour
         if (!sm_reels[3].ReelSpinning && (sm_lever.LeverTriggered || sm_button.ButtonTriggered) && Tries_Left_Count > 0)
         {
             Debug.Log(this.name + " Current Outcome: " + admin_SM.OutcomeList[0]);
-            Debug.Log(this.name + " Started spinning Reels");
             currentState = SM_State.Spinning;
 
             sm_reels[0].Start_Script_Then_End(admin_SM.ReelSpinTime[0], admin_SM.OutcomeList[0]);
