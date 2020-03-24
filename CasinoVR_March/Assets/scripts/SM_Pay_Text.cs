@@ -26,8 +26,9 @@ public class SM_Pay_Text : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (sm_manager.currentState !=  SlotMachine_Manager.SM_State.Spinning) { 
-        pays_text.text = "Won: " + sm_manager.Won_Pay + "$";
+        if (sm_manager.currentState !=  SlotMachine_Manager.SM_State.Spinning) {         
+        pays_text.text = "Won: $" + sm_manager.Won_Pay;
+
         }
 
     }
