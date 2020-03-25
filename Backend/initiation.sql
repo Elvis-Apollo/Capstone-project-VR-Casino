@@ -1,4 +1,3 @@
-
 BEGIN
 CREATE TABLE users (
 	user_id varchar(30) NOT NULL,
@@ -20,14 +19,16 @@ CREATE TABLE actions(
 );
 CREATE TABLE environment (
 	env_id varchar(30) NOT NULL,
-	type int NOT NULL
+	type int NOT NULL,
+	PRIMARY KEY (env_id)
 );
 
 CREATE TABLE slot(
 	slot_session_id int NOT NULL,
 	outcome varchar(30),
 	outcome_no int NOT NULL,
-	slot_type int NOT NULL
+	slot_type int NOT NULL,
+	PRIMARY KEY (slot_session_id),
 );
 
 CREATE TABLE round(
@@ -37,6 +38,10 @@ CREATE TABLE round(
 	slot_session_id int NOT NULL,
 	earn real NOT NULL,
 	start_time datetime NOT NULL,
-	end_time datetime NOT NULL
+	end_time datetime NOT NULL,
+	PRIMARY KEY (round_id),
+	FOREIGN KEY (user_id) REFERENCES users(user_id),
+	FOREIGN KEY (env_id) REFERENCES environment(env_id),
+	FOREIGN KEY (slot_session_id) REFERENCES slot(slot_session_id)
 );
 END 
