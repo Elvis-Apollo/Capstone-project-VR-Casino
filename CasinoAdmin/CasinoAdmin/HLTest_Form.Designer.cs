@@ -65,6 +65,10 @@
             this.A6_radioBtn = new System.Windows.Forms.RadioButton();
             this.row5_panel = new System.Windows.Forms.Panel();
             this.A5_radioBtn = new System.Windows.Forms.RadioButton();
+            this.HL_Thanks_panel = new System.Windows.Forms.Panel();
+            this.HL_Thanks_label = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.row3_panel.SuspendLayout();
             this.row4_panel.SuspendLayout();
             this.row2_panel.SuspendLayout();
@@ -77,6 +81,7 @@
             this.row7_panel.SuspendLayout();
             this.row6_panel.SuspendLayout();
             this.row5_panel.SuspendLayout();
+            this.HL_Thanks_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // B2_radioBtn
@@ -567,11 +572,54 @@
             this.A5_radioBtn.Text = "A5";
             this.A5_radioBtn.UseVisualStyleBackColor = true;
             // 
+            // HL_Thanks_panel
+            // 
+            this.HL_Thanks_panel.Controls.Add(this.label2);
+            this.HL_Thanks_panel.Controls.Add(this.label1);
+            this.HL_Thanks_panel.Controls.Add(this.HL_Thanks_label);
+            this.HL_Thanks_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.HL_Thanks_panel.Location = new System.Drawing.Point(0, 0);
+            this.HL_Thanks_panel.Name = "HL_Thanks_panel";
+            this.HL_Thanks_panel.Size = new System.Drawing.Size(1026, 857);
+            this.HL_Thanks_panel.TabIndex = 2;
+            this.HL_Thanks_panel.Visible = false;
+            // 
+            // HL_Thanks_label
+            // 
+            this.HL_Thanks_label.AutoSize = true;
+            this.HL_Thanks_label.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HL_Thanks_label.Location = new System.Drawing.Point(85, 370);
+            this.HL_Thanks_label.Name = "HL_Thanks_label";
+            this.HL_Thanks_label.Size = new System.Drawing.Size(824, 31);
+            this.HL_Thanks_label.TabIndex = 0;
+            this.HL_Thanks_label.Text = "Thank you for participating in the Holt and Laury Choice Decision task.";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(85, 261);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(182, 31);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Choices Saved.";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(85, 512);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(529, 31);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Please contact Admin for futher instructions.";
+            // 
             // HLTest_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1026, 857);
+            this.Controls.Add(this.HL_Thanks_panel);
             this.Controls.Add(this.HL_panel);
             this.Name = "HLTest_Form";
             this.Text = "HLTest_Form";
@@ -598,6 +646,8 @@
             this.row6_panel.PerformLayout();
             this.row5_panel.ResumeLayout(false);
             this.row5_panel.PerformLayout();
+            this.HL_Thanks_panel.ResumeLayout(false);
+            this.HL_Thanks_panel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -641,5 +691,9 @@
         private System.Windows.Forms.RadioButton B3_radioBtn;
         private System.Windows.Forms.RadioButton A3_radioBtn;
         private System.Windows.Forms.Panel HL_panel;
+        private System.Windows.Forms.Panel HL_Thanks_panel;
+        private System.Windows.Forms.Label HL_Thanks_label;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
