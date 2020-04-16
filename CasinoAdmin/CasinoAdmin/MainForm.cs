@@ -1,7 +1,8 @@
 ﻿using System;
 using System.IO;
 using System.Windows.Forms;
-
+using System.Data;
+using System.Data.SqlClient;
 namespace CasinoAdmin
 
 /*
@@ -18,7 +19,10 @@ namespace CasinoAdmin
 
         //------------------------ json directory for slot machines.json ------------------------
         public static string JsonFolderDirectory = "";
+       
 
+       
+              
         //------------------------ Visual Variables ------------------------
         private FolderBrowserDialog folderBrowsePopup;
         private string directoryLabelText = "Selected directory: ";
@@ -26,6 +30,7 @@ namespace CasinoAdmin
         //************************** Constructor ******************************************
         public MainForm()
         {
+             
             InitializeComponent();
             panel_main.BringToFront();
             panel_admin.Visible = false;
@@ -152,6 +157,24 @@ namespace CasinoAdmin
             panel_main.BringToFront();
             panel_admin.SendToBack();
             panel_main.Visible = true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            RegisterForm  reg = new RegisterForm();
+            reg.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Test test = new Test();
+            test.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.ShowDialog();
         }
     }
 }
