@@ -14,9 +14,10 @@ namespace CasinoAdmin
     public partial class Login : Form
     {
         
-        public static String admin_user="";
+        public static String logged_in_user="";
         public static String user = "";
         public static String password="";
+
         public Login()
         {
             InitializeComponent();
@@ -52,6 +53,7 @@ namespace CasinoAdmin
                    if(da.GetValue(0).ToString() == user)
                     {
                         MessageBox.Show("Login Successful");
+                        logged_in_user = user;
                     }
                     else
                     {

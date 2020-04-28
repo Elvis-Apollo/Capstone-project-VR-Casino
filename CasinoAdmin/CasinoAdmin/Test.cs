@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
+
+
 namespace CasinoAdmin
 {
         public partial class Test : Form
@@ -17,10 +19,31 @@ namespace CasinoAdmin
         public static String outcome = "";
         public static String env_type = "";
         public static int trial_num = 1;
+        public static String session_id = "";
+        public static int session = 0;
+        public static DateTime now = DateTime.Now;
         public static String[] results= new String[10];
         public Test()
         {
-            InitializeComponent();
+          
+           
+                InitializeComponent();
+                
+                label5.Text = $"{label5.Text} {Login.logged_in_user}";
+                SqlConnection sqlCon = new SqlConnection("Data Source=localhost;Initial Catalog=Test;Integrated Security=True");
+                String command = $"select max(slot_session_id) from slot;";
+                sqlCon.Open();
+                SqlCommand cmd = new SqlCommand(command, sqlCon);
+                SqlDataReader da = cmd.ExecuteReader();
+                while (da.Read())
+                {
+                    session_id = da.GetValue(0).ToString();
+                }
+                session = int.Parse(session_id) + 1;
+
+                sqlCon.Close();
+                label1.Text = $"{label1.Text} {session}";
+            
         }
 
         private void Test_Load(object sender, EventArgs e)
@@ -58,13 +81,12 @@ namespace CasinoAdmin
             else
             {
                 SqlConnection sqlCon = new SqlConnection("Data Source=localhost;Initial Catalog=Test;Integrated Security=True");
-                String command = $"INSERT INTO slot (slot_session_id, outcome,outcome_no, slot_type) VALUES({2},'{outcome}',{trial_num},{slot_machine})";
+                String command = $"INSERT INTO slot (slot_session_id, outcome,outcome_no, slot_type) VALUES({session},'{outcome}',{trial_num},{slot_machine})";
                 sqlCon.Open();
                 SqlCommand cmd = new SqlCommand(command, sqlCon);
                 cmd.ExecuteNonQuery();
                 sqlCon.Close();
                 trial_num++;
-                //MessageBox.Show($"User With Details username:{username}, password:{password}, user type:{userType} has been registered");
             }
         }
 
@@ -76,6 +98,26 @@ namespace CasinoAdmin
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButton5.Checked) outcome = "near_miss";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SqlConnection sqlCon = new SqlConnection("Data Source=localhost;Initial Catalog=Test;Integrated Security=True");
+            String command = $"INSERT INTO round (round_id, user_id,env_id ,slot_session_id,earn,start_time,end_time) VALUES('test','{Login.logged_in_user}','{env_type}',{session},{10.8},'{now}','{DateTime.Now}')";
+            sqlCon.Open();
+            SqlCommand cmd = new SqlCommand(command, sqlCon);
+            cmd.ExecuteNonQuery();
+            sqlCon.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

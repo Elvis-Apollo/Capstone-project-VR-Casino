@@ -167,14 +167,32 @@ namespace CasinoAdmin
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Test test = new Test();
-            test.ShowDialog();
+            if (Login.logged_in_user == "")
+            {
+                MessageBox.Show("NO USER IS LOGGED IN");
+            }
+            else
+            {
+                Test test = new Test();
+                test.ShowDialog();
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             Login login = new Login();
             login.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            UserResults user = new UserResults();
+            user.ShowDialog();
+        }
+
+        private void tableLayout_main_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
