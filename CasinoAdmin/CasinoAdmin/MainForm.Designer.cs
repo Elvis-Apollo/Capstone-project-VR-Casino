@@ -43,13 +43,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.slotMach_btn = new System.Windows.Forms.Button();
             this.admin_settings_sub_panel = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             this.admin_header_label = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.back_toMain_btn = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.panel_main.SuspendLayout();
             this.tableLayout_main.SuspendLayout();
             this.panel_admin.SuspendLayout();
@@ -264,7 +263,6 @@
             this.admin_settings_sub_panel.Controls.Add(this.button6);
             this.admin_settings_sub_panel.Controls.Add(this.admin_header_label);
             this.admin_settings_sub_panel.Controls.Add(this.button4);
-            this.admin_settings_sub_panel.Controls.Add(this.button5);
             this.admin_settings_sub_panel.Controls.Add(this.button3);
             this.admin_settings_sub_panel.Controls.Add(this.button2);
             this.admin_settings_sub_panel.Controls.Add(this.back_toMain_btn);
@@ -274,6 +272,19 @@
             this.admin_settings_sub_panel.Name = "admin_settings_sub_panel";
             this.admin_settings_sub_panel.Size = new System.Drawing.Size(1363, 250);
             this.admin_settings_sub_panel.TabIndex = 5;
+            // 
+            // button6
+            // 
+            this.button6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button6.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(706, 162);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(299, 65);
+            this.button6.TabIndex = 13;
+            this.button6.Text = "Initalize Database";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // admin_header_label
             // 
@@ -299,19 +310,6 @@
             this.button4.Text = "Login";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button5.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(706, 162);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(299, 65);
-            this.button5.TabIndex = 12;
-            this.button5.Text = "Results";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button3
             // 
@@ -351,19 +349,6 @@
             this.back_toMain_btn.Text = "Back to Casino Admin";
             this.back_toMain_btn.UseVisualStyleBackColor = true;
             this.back_toMain_btn.Click += new System.EventHandler(this.back_toMain_btn_Click);
-            // 
-            // button6
-            // 
-            this.button6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button6.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(1013, 72);
-            this.button6.Margin = new System.Windows.Forms.Padding(4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(299, 65);
-            this.button6.TabIndex = 13;
-            this.button6.Text = "Initalize Database";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // MainForm
             // 
@@ -410,7 +395,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button6;
     }
