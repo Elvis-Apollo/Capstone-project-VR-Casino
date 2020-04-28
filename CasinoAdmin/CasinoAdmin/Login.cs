@@ -41,7 +41,7 @@ namespace CasinoAdmin
             }
             else
             {
-                SqlConnection sqlCon = new SqlConnection("Data Source=localhost;Initial Catalog=Test;Integrated Security=True");
+                SqlConnection sqlCon = new SqlConnection("Data Source=localhost;Initial Catalog=Casino;Integrated Security=True");
                 String command = $"select user_id from users where user_id='{user}' and password = '{password}'";
                
                 sqlCon.Open();

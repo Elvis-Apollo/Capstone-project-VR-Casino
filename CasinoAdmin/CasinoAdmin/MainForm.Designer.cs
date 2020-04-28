@@ -49,6 +49,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.back_toMain_btn = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel_main.SuspendLayout();
             this.tableLayout_main.SuspendLayout();
             this.panel_admin.SuspendLayout();
@@ -260,6 +261,7 @@
             // 
             // admin_settings_sub_panel
             // 
+            this.admin_settings_sub_panel.Controls.Add(this.button6);
             this.admin_settings_sub_panel.Controls.Add(this.admin_header_label);
             this.admin_settings_sub_panel.Controls.Add(this.button4);
             this.admin_settings_sub_panel.Controls.Add(this.button5);
@@ -350,6 +352,19 @@
             this.back_toMain_btn.UseVisualStyleBackColor = true;
             this.back_toMain_btn.Click += new System.EventHandler(this.back_toMain_btn_Click);
             // 
+            // button6
+            // 
+            this.button6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button6.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(1013, 72);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(299, 65);
+            this.button6.TabIndex = 13;
+            this.button6.Text = "Initalize Database";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -397,6 +412,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button6;
     }
 }
 

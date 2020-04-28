@@ -55,7 +55,7 @@ namespace CasinoAdmin
             }
             else
             {
-                SqlConnection sqlCon = new SqlConnection("Data Source=localhost;Initial Catalog=Test;Integrated Security=True");
+                SqlConnection sqlCon = new SqlConnection("Data Source=localhost;Initial Catalog=Casino;Integrated Security=True");
                 String command = $"INSERT INTO users (user_id, password,user_role) VALUES('{username}','{password}','{userType}')";
                 sqlCon.Open();
                 SqlCommand cmd = new SqlCommand(command, sqlCon);

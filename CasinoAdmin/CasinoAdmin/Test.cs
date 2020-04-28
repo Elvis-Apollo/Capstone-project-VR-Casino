@@ -80,7 +80,7 @@ namespace CasinoAdmin
             }
             else
             {
-                SqlConnection sqlCon = new SqlConnection("Data Source=localhost;Initial Catalog=Test;Integrated Security=True");
+                SqlConnection sqlCon = new SqlConnection("Data Source=localhost;Initial Catalog=Casino;Integrated Security=True");
                 String command = $"INSERT INTO slot (slot_session_id, outcome,outcome_no, slot_type) VALUES({session},'{outcome}',{trial_num},{slot_machine})";
                 sqlCon.Open();
                 SqlCommand cmd = new SqlCommand(command, sqlCon);
