@@ -72,6 +72,10 @@ namespace CasinoAdmin
                 MessageBox.Show("Please contact Admin to initalize test.", "Contact Admin!");
 
             }
+            else if (Login.logged_in_user == "")
+            {
+                MessageBox.Show("No User is currently logged in", "Contact Admin!");
+            }
             else
             {
                 // create holt laury test form 

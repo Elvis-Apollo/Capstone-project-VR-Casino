@@ -30,7 +30,7 @@ namespace CasinoAdmin
                 InitializeComponent();
                 
                 label5.Text = $"{label5.Text} {Login.logged_in_user}";
-                SqlConnection sqlCon = new SqlConnection("Data Source=localhost;Initial Catalog=Test;Integrated Security=True");
+                SqlConnection sqlCon = new SqlConnection("Data Source=localhost;Initial Catalog=Casino;Integrated Security=True");
                 String command = $"select max(slot_session_id) from slot;";
                 sqlCon.Open();
                 SqlCommand cmd = new SqlCommand(command, sqlCon);
@@ -38,8 +38,18 @@ namespace CasinoAdmin
                 while (da.Read())
                 {
                     session_id = da.GetValue(0).ToString();
+                    
+                
                 }
+            if (session_id == "")
+            {
+
+            }
+            else
+            {
                 session = int.Parse(session_id) + 1;
+            }
+                
 
                 sqlCon.Close();
                 label1.Text = $"{label1.Text} {session}";
@@ -86,6 +96,7 @@ namespace CasinoAdmin
                 SqlCommand cmd = new SqlCommand(command, sqlCon);
                 cmd.ExecuteNonQuery();
                 sqlCon.Close();
+                MessageBox.Show("Trial Saved");
                 trial_num++;
             }
         }
@@ -102,14 +113,15 @@ namespace CasinoAdmin
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection sqlCon = new SqlConnection("Data Source=localhost;Initial Catalog=Test;Integrated Security=True");
+            SqlConnection sqlCon = new SqlConnection("Data Source=localhost;Initial Catalog=Casino;Integrated Security=True");
             String command = $"INSERT INTO round (round_id, user_id,env_id ,slot_session_id,earn,start_time,end_time) VALUES('test','{Login.logged_in_user}','{env_type}',{session},{10.8},'{now}','{DateTime.Now}')";
             sqlCon.Open();
             SqlCommand cmd = new SqlCommand(command, sqlCon);
             cmd.ExecuteNonQuery();
             sqlCon.Close();
+            MessageBox.Show("All results of the current trial have been saved, you may safley close the window");
         }
-
+        // below two functions do nothing but are needed otherwise program crashes
         private void label1_Click(object sender, EventArgs e)
         {
            
